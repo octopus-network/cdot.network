@@ -18,6 +18,9 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "husky": "^3.0.9",
+    "prettier": "1.19.1",
+    "pretty-quick": "^2.0.1",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
@@ -42,5 +45,10 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
 }
