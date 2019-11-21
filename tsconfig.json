@@ -1,0 +1,66 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "baseUrl": "src",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "paths": {
+      "~type": [
+        "./types"
+      ],
+      "~type/*": [
+        "./types/*"
+      ],
+      "~component": [
+        "./components"
+      ],
+      "~component/*": [
+        "./components/*"
+      ],
+      "~store": [
+        "./store"
+      ],
+      "~store/*": [
+        "./store/*"
+      ],
+      "~style": [
+        "./style"
+      ],
+      "~style/*": [
+        "./style/*"
+      ],
+      "~util": [
+        "./utils"
+      ],
+      "~util/*": [
+        "./utils/*"
+      ],
+      "~view": [
+        "./views"
+      ],
+      "~view/*": [
+        "./views/*"
+      ]
+    },
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react",
+    "typeRoots": [
+      "./src/types",
+      "./src/react-app-env.d.ts",
+      "./node_modules/@types"
+    ]
+  }
+}
