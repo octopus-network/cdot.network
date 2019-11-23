@@ -54,6 +54,7 @@ exports.config = {
   resolve: {
     extensions: ['*', '.js', '.json', '.ts', '.tsx'],
     alias: {
+      'react-dom': '@hot-loader/react-dom',
       '~type': resolve(__dirname, '..', 'types'),
       '~api': resolve(__dirname, '..', 'src', 'api'),
       '~component': resolve(__dirname, '..', 'src', 'components'),
@@ -164,6 +165,10 @@ exports.config = {
         from: resolve(__dirname, '..', 'public'),
         to: resolve(__dirname, '..', 'dist'),
         ignore: ['index.html', 'manifest.json']
+      },
+      {
+        from: resolve(__dirname, '..', 'src', 'assets'),
+        to: resolve(__dirname, '..', 'dist', 'assets')
       }])
   ].filter(Boolean),
   performance: {
