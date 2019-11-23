@@ -6,9 +6,9 @@ const HomePage: React.FC = () => {
   return (
     <Fragment>
       <Header items={[
-        { name: 'Github' },
-        { name: 'WhitePaper' },
-        { name: 'Follow us' }
+        { name: 'Github', url: 'https://github.com/cdot-network' },
+        { name: 'WhitePaper', url: '/contact' },
+        { name: 'Follow us', url: '/contact' }
       ]}/>
     </Fragment>
   )
