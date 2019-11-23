@@ -1,5 +1,5 @@
 import React from 'react'
-import { mergeStyleSets } from 'office-ui-fabric-react'
+import { mergeStyleSets, Text } from 'office-ui-fabric-react'
 
 import './index.less'
 
@@ -12,11 +12,16 @@ export interface HeaderProps {
 
 const classNames = mergeStyleSets({
   header: {
+    display: 'flex',
     height: '900px',
     background: 'no-repeat center center',
     backgroundImage: 'url(/assets/images/banner_img_bg_default.png)',
     backgroundAttachment: 'scroll',
-    backgroundSize: 'cover'
+    backgroundSize: 'cover',
+    flexDirection: 'column',
+    alignItems: 'center',
+    alignContent: 'center',
+    justifyContent: 'center'
   },
   commandBar: {
     position: 'absolute',
@@ -43,6 +48,10 @@ const classNames = mergeStyleSets({
   commandBarItem: {
     color: 'white',
     textDecoration: 'none'
+  },
+  sayingText: {
+    color: 'white',
+    fontWeight: 'lighter'
   }
 })
 
@@ -68,6 +77,24 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
   return (
     <div className={classNames.header}>
       <CommandBar items={items}/>
+      <img src='/assets/images/banner_img_logo_default.png' alt='logo'/>
+      <Text
+        variant='mega'
+        className={classNames.sayingText}
+        style={{
+          padding: '0 9rem'
+        }}
+      >
+        our earth is only one polka dot among a million stars in the cosmos
+      </Text>
+      <Text variant='xxLargePlus'
+        className={classNames.sayingText}
+        style={{
+          marginLeft: '3rem'
+        }}
+      >
+        - Yayoi Kusama
+      </Text>
     </div>
   )
 }
