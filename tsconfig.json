@@ -62,5 +62,11 @@
       "./src/react-app-env.d.ts",
       "./node_modules/@types"
     ]
-  }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
