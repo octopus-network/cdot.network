@@ -39,6 +39,10 @@ const classNames = mergeStyleSets({
     fontWeight: 'lighter',
     display: 'flex',
     flexDirection: 'row'
+  },
+  commandBarItem: {
+    color: 'white',
+    textDecoration: 'none'
   }
 })
 
@@ -47,10 +51,14 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
     <div className={classNames.header}>
       <div className={classNames.commandBar}>
         <div className={classNames.commandBarItems}>
-          {items.map((item, index) => (<span style={{
-            paddingLeft: index ? '2rem' : 0,
-            paddingRight: index === (items.length - 1) ? '2rem' : 0 // 最后一个 element 给 切换语言按钮 padding
-          }} key={item.name}>{item.name}</span>))}
+          {items.map((item, index) => (
+            // todo: use Link on 'react-router-dom'
+            <a className={classNames.commandBarItem} style={{
+              paddingLeft: index ? '2rem' : 0,
+              paddingRight: index === (items.length - 1) ? '2rem' : 0 // 最后一个 element 给 切换语言按钮 padding
+            }} key={item.name} href={item.url || '#'}>
+              {item.name}
+            </a>))}
           <span>EN</span>
         </div>
       </div>
