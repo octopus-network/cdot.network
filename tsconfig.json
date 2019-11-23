@@ -8,6 +8,9 @@
       "esnext"
     ],
     "paths": {
+      "~asset/*": [
+        "./assets/*"
+      ],
       "~type": [
         "./types"
       ],
