@@ -41,7 +41,6 @@ const classNames = mergeStyleSets({
     paddingRight: '3rem',
     left: '10px',
     fontSize: '24px',
-    fontWeight: 'lighter',
     display: 'flex',
     flexDirection: 'row'
   },
