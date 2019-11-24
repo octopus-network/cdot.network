@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import Header from '~component/Header'
 import { Fabric, Stack, mergeStyleSets, PrimaryButton, Text } from 'office-ui-fabric-react'
+import IntroduceCard from '~component/IntroduceCard'
 
 const classNames = mergeStyleSets({
   learnMoreButton: {
@@ -30,9 +31,33 @@ const HomePage: React.FC = () => {
             </PrimaryButton>
           </Stack.Item>
           <Stack.Item align='center'>
-            <Text variant='xxLargePlus'>
+            <Text variant='superLarge'>
               A General-Purpose Hub for Ledger Interoperation
             </Text>
+          </Stack.Item>
+          <Stack.Item align='center'>
+            <Stack tokens={{
+              childrenGap: '2rem'
+            }} horizontal>
+              <IntroduceCard
+                title='Seamless Interoperation'
+                introduction='Ledgers of any type may get involved effortlessly in this internet of value.'
+                iconUrl='assets/images/content1_icon_left_default.png'
+                to=''
+              />
+              <IntroduceCard
+                title='Long-term Sustainability'
+                introduction='A mechanism ensures all participants are distributed wealth fairly. '
+                iconUrl='assets/images/content1_icon_center_default.png'
+                to=''
+              />
+              <IntroduceCard
+                title='Settlement Assurance'
+                introduction='When risk becomes a measurable estimate, all transactions could be settled with confidence.'
+                iconUrl='assets/images/content1_icon_right_default.png'
+                to=''
+              />
+            </Stack>
           </Stack.Item>
         </Stack>
       </Fabric>
