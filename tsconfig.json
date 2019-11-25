@@ -23,6 +23,9 @@
       "~component/*": [
         "./components/*"
       ],
+      "~data/*": [
+        "./data/*"
+      ],
       "~store": [
         "./store"
       ],

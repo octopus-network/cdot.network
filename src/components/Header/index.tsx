@@ -1,8 +1,6 @@
 import React from 'react'
 import { mergeStyleSets, Text } from 'office-ui-fabric-react'
 
-import './index.less'
-
 export interface HeaderProps {
   items: {
     name: string
