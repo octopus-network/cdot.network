@@ -1,15 +1,9 @@
 import React from 'react'
 import { Card } from '@uifabric/react-cards'
 import { Text, mergeStyleSets } from 'office-ui-fabric-react'
+import { Article } from '~type/index'
 
-interface NewsCardProps {
-  titleImgUrl: string
-  title: string
-  description: string
-  author: string
-  date: string
-  to: string
-}
+type NewsCardProps = Article
 
 const classNames = mergeStyleSets({
   newsCard: {

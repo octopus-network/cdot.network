@@ -58,6 +58,7 @@ exports.config = {
       '~type': resolve(__dirname, '..', 'types'),
       '~api': resolve(__dirname, '..', 'src', 'api'),
       '~component': resolve(__dirname, '..', 'src', 'components'),
+      '~data': resolve(__dirname, '..', 'src', 'data'),
       '~store': resolve(__dirname, '..', 'src', 'store'),
       '~style': resolve(__dirname, '..', 'src', 'style'),
       '~util': resolve(__dirname, '..', 'src', 'utils'),
