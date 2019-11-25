@@ -3,6 +3,11 @@ import Header from '~component/Header'
 import { Fabric, Stack, mergeStyleSets, PrimaryButton, Text, Image } from 'office-ui-fabric-react'
 import IntroduceCard from '~component/IntroduceCard'
 import NewsCard from '~component/NewsCard'
+import FootBar from '~component/FootBar'
+import { Article } from '~type/index'
+import { article1, article2, article3, article4 } from '~data/articles'
+
+const articles: Article[] = [article1, article2, article3, article4]
 
 const classNames = mergeStyleSets({
   learnMoreButton: {
@@ -61,11 +66,13 @@ const HomePage: React.FC = () => {
             </Stack>
           </Stack.Item>
         </Stack>
-        <Stack styles={{
-          root: {
-            backgroundColor: '#271245'
-          }
-        }}>
+        <Stack
+          styles={{
+            root: {
+              backgroundColor: '#271245'
+            }
+          }}
+        >
           <Stack.Item styles={{
             root: {
               paddingTop: '2rem'
@@ -105,17 +112,19 @@ const HomePage: React.FC = () => {
                 width: '100%'
               }
             }}
-            align='center'
           >
             <Stack
               tokens={{
-                childrenGap: '2rem'
+                childrenGap: '2rem',
+                padding: '0 0 5rem 0'
               }}
               styles={{
                 root: {
                   overflowX: 'auto'
                 }
               }}
+              horizontalAlign='center'
+              verticalAlign='center'
               horizontal
             >
               <Stack.Item>
@@ -157,6 +166,7 @@ const HomePage: React.FC = () => {
             </Stack>
           </Stack.Item>
         </Stack>
+        <FootBar/>
       </Fabric>
     </Fragment>
   )
