@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import Header from '~component/Header'
 import { Fabric, Stack, mergeStyleSets, PrimaryButton, Text, Image } from 'office-ui-fabric-react'
 import IntroduceCard from '~component/IntroduceCard'
-import NewsCard from '~component/NewsCard'
+import ArticleCard from '~component/ArticleCard'
 import FootBar from '~component/FootBar'
 import { Article } from '~type/index'
 import { article1, article2, article3, article4 } from '~data/articles'
@@ -129,7 +129,7 @@ const HomePage: React.FC = () => {
             >
               {articles.map(article => (
                 <Stack.Item align='stretch' key={article.description}>
-                  <NewsCard
+                  <ArticleCard
                     {...article}
                   />
                 </Stack.Item>

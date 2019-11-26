@@ -3,7 +3,7 @@ import { Card } from '@uifabric/react-cards'
 import { Text, mergeStyleSets, Separator, ActionButton } from 'office-ui-fabric-react'
 import { Article } from '~type/index'
 
-type NewsCardProps = Article
+type ArticleCardProps = Article
 
 const classNames = mergeStyleSets({
   newsCard: {
@@ -15,7 +15,7 @@ const classNames = mergeStyleSets({
   }
 })
 
-const NewsCard: React.FC<NewsCardProps> = ({ titleImgUrl, author, date, title, description, to }) => {
+const ArticleCard: React.FC<ArticleCardProps> = ({ titleImgUrl, author, date, title, description, to }) => {
   return (
     <Card
       tokens={{
@@ -93,4 +93,4 @@ const NewsCard: React.FC<NewsCardProps> = ({ titleImgUrl, author, date, title, d
   )
 }
 
-export default NewsCard
+export default ArticleCard
