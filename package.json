@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.config.js --hot",
-    "build:test": "rimraf dist && cross-env NODE_ENV=production DEBUG=true MOCK=true PUBLIC_URL='' webpack --config config/webpack.build.config.js --progress --hide-modules",
-    "build": "rimraf dist && cross-env NODE_ENV=production PUBLIC_URL='' webpack --config config/webpack.build.config.js --progress --hide-modules",
+    "build:test": "rimraf dist && cross-env NODE_ENV=production DEBUG=true MOCK=true webpack --config config/webpack.build.config.js --progress --hide-modules",
+    "build": "rimraf dist && cross-env NODE_ENV=production webpack --config config/webpack.build.config.js --progress --hide-modules",
     "lint": "yarn lint:eslint && yarn lint:style",
     "lint:eslint": "eslint --ext .jsx,.js,.ts,.tsx src",
     "lint:style": "stylelint src",
