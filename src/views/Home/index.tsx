@@ -13,6 +13,8 @@ const offset = 300
 
 const classNames = mergeStyleSets({
   learnMoreButton: {
+    width: '288px',
+    backgroundColor: '#D0343A',
     transform: 'translate(0, -50%)', // tip: 元素向上移动50%
     height: '5rem'
   },
@@ -27,7 +29,9 @@ const IntroductionArea: React.FC = () => {
     <Fragment>
       <Stack>
         <Stack.Item align='center'>
-          <PrimaryButton className={classNames.learnMoreButton}>
+          <PrimaryButton
+            className={classNames.learnMoreButton}
+          >
             <div>
               <Text variant='xLarge'>Cdot</Text>
               <br/>
@@ -40,7 +44,12 @@ const IntroductionArea: React.FC = () => {
           A General-Purpose Hub for Ledger Interoperation
           </Text>
         </Stack.Item>
-        <Stack.Item styles={{ root: { paddingBottom: '5rem' } }} align='center'>
+        <Stack.Item styles={{
+          root: {
+            paddingTop: '2rem',
+            paddingBottom: '4rem'
+          }
+        }} align='center'>
           <Stack tokens={{
             childrenGap: '2rem'
           }} horizontal>
@@ -51,14 +60,14 @@ const IntroductionArea: React.FC = () => {
               to=''
             />
             <IntroduceCard
-              title='Long-term Sustainability'
-              introduction='A mechanism ensures all participants are distributed wealth fairly. '
+              title='Settlement Assurance'
+              introduction='When risk becomes a measurable estimate, all transactions could be settled with confidence.'
               iconUrl='assets/images/content1_icon_center_default.png'
               to=''
             />
             <IntroduceCard
-              title='Settlement Assurance'
-              introduction='When risk becomes a measurable estimate, all transactions could be settled with confidence.'
+              title='Long-term Sustainability'
+              introduction='A mechanism ensures the fair distribution of wealth to all participants.'
               iconUrl='assets/images/content1_icon_right_default.png'
               to=''
             />
