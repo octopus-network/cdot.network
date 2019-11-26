@@ -13,15 +13,27 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
-    - name: Build Project
+    - name: Cache NPM dependencies
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: ${{ runner.OS }}-npm-cache
+        restore-keys: |
+          ${{ runner.OS }}-npm-cache-
+    - name: Install Dependencies
       run: |
         npm install --registry=https://registry.npm.taobao.org -g yarn
         yarn config set registry https://registry.npm.taobao.org
         yarn --frozen-lockfile --non-interactive
+    - name: Build
+      run: |
         yarn build
       env:
         CI: true
-    - name: GitHub Pages Deploy
-      uses: maxheld83/ghpages@v0.2.1
-      env:
-        BUILD_DIR: /dist
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.GH_PAT }}
+        BASE_BRANCH: dev
+        BRANCH: gh-pages
+        FOLDER: dist
