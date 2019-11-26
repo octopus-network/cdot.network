@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card } from '@uifabric/react-cards'
-import { Text, mergeStyleSets } from 'office-ui-fabric-react'
+import { Text, mergeStyleSets, Separator, ActionButton } from 'office-ui-fabric-react'
 import { Article } from '~type/index'
 
 type NewsCardProps = Article
@@ -21,6 +21,8 @@ const NewsCard: React.FC<NewsCardProps> = ({ titleImgUrl, author, date, title, d
       tokens={{
         minWidth: '352px',
         width: '352px',
+        minHeight: '527px',
+        height: '527px',
         childrenMargin: 25
       }}
       className={classNames.newsCard}
@@ -38,18 +40,54 @@ const NewsCard: React.FC<NewsCardProps> = ({ titleImgUrl, author, date, title, d
         {/* tip: 填充高度 */}
         <div style={{ height: '240px' }}/>
       </Card.Section>
-      <Card.Section horizontal>
+      <Card.Section
+        styles={{
+          root: {
+            color: '#666666'
+          }
+        }}
+        horizontal
+      >
         <Text>{author}</Text>
+        <Separator vertical/>
         <Text>{date}</Text>
       </Card.Section>
       <Card.Section>
-        <Text>{title}</Text>
+        <Text
+          styles={{
+            root: {
+              fontWeight: 'bold'
+            }
+          }}
+          variant='large'
+        >
+          {title}
+        </Text>
       </Card.Section>
-      <Card.Section>
+      <Card.Section
+        styles={{
+          root: {
+            color: '#666666'
+          }
+        }}
+      >
         <Text>{description}</Text>
       </Card.Section>
-      <Card.Section>
-        {to}
+      <Card.Section
+        // tip: let Link at bottom
+        verticalAlign='end'
+        grow={1}
+      >
+        <ActionButton
+          href={to}
+          text='Learn More'
+          menuIconProps={{ iconName: 'forward', color: '#553580' }}
+          styles={{
+            root: {
+              color: '#553580'
+            }
+          }}
+        />
       </Card.Section>
     </Card>
   )
