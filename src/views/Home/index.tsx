@@ -9,10 +9,16 @@ import { article1, article2, article3, article4 } from '~data/articles'
 
 const articles: Article[] = [article1, article2, article3, article4]
 
+const offset = 300
+
 const classNames = mergeStyleSets({
   learnMoreButton: {
     transform: 'translate(0, -50%)', // tip: 元素向上移动50%
     height: '5rem'
+  },
+  articlesArea: {
+    marginTop: `-${offset}px`,
+    transform: `translate(0, ${offset}px)`
   }
 })
 
@@ -118,6 +124,7 @@ const HomePage: React.FC = () => {
                 childrenGap: '2rem',
                 padding: '0 0 5rem 0'
               }}
+              className={classNames.articlesArea}
               styles={{
                 root: {
                   overflowX: 'auto'
@@ -135,6 +142,12 @@ const HomePage: React.FC = () => {
                 </Stack.Item>
               ))}
             </Stack>
+            <div
+              style={{
+                backgroundColor: '#F3F2FA',
+                height: `${offset}px`
+              }}
+            />
           </Stack.Item>
         </Stack>
         <FootBar/>
