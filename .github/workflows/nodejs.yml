@@ -21,3 +21,7 @@ jobs:
         yarn build
       env:
         CI: true
+    - name: GitHub Pages Deploy
+      uses: maxheld83/ghpages@v0.2.1
+      env:
+        BUILD_DIR: /dist
