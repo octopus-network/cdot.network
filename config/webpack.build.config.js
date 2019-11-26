@@ -5,8 +5,14 @@ const HappyPack = require('happypack')
 const { config: baseWebpackConfig, happyThreadPool } = require('./webpack.base.config')
 
 const openDEBUG = !!process.env.DEBUG
+const publicUrl = process.env.PUBLIC_URL
+
+if (process.env.CI) {
+  console.log('is running CI')
+}
 
 console.log('openDEBUG: ', openDEBUG)
+console.log('publicUrl: ', publicUrl)
 
 module.exports = merge(baseWebpackConfig, {
   entry: {
@@ -18,7 +24,7 @@ module.exports = merge(baseWebpackConfig, {
     filename: '[name].js',
     futureEmitAssets: true,
     chunkFilename: '[name].chunk.js',
-    publicPath: '/',
+    publicPath: publicUrl || '/',
     devtoolModuleFilenameTemplate: info => resolve(info.absoluteResourcePath).replace(/\\/g, '/')
   },
   module: {

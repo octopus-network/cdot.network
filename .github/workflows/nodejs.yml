@@ -29,6 +29,7 @@ jobs:
       run: |
         yarn build
       env:
+        PUBLIC_URL: "/cdot.network/"
         CI: true
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
