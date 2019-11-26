@@ -3,5 +3,5 @@ module.exports = {
     ['react-app', { flow: false, typescript: true }],
     '@babel/preset-env'
   ],
-  plugins: ['react-hot-loader/babel']
+  plugins: ['react-hot-loader/babel', 'macros']
 }
