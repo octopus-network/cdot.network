@@ -124,11 +124,11 @@ const HomePage: React.FC = () => {
                 }
               }}
               horizontalAlign='center'
-              verticalAlign='start'
+              verticalAlign='center'
               horizontal
             >
               {articles.map(article => (
-                <Stack.Item key={article.description}>
+                <Stack.Item align='stretch' key={article.description}>
                   <NewsCard
                     {...article}
                   />
