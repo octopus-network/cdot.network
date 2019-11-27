@@ -12,6 +12,14 @@ const classNames = mergeStyleSets({
   titleImage: {
     backgroundPosition: 'center center',
     backgroundSize: 'cover'
+  },
+  buttonColor: {
+    color: '#553580',
+    selectors: {
+      ':hover': {
+        color: '#371761'
+      }
+    }
   }
 })
 
@@ -82,9 +90,15 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ titleImgUrl, author, date, ti
           href={to}
           text='Learn More'
           menuIconProps={{ iconName: 'forward', color: '#553580' }}
+          className={classNames.buttonColor}
           styles={{
-            root: {
-              color: '#553580'
+            menuIcon: {
+              color: '#553580',
+              selectors: {
+                ':hover': {
+                  color: '#371761'
+                }
+              }
             }
           }}
         />
