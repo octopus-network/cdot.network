@@ -78,6 +78,14 @@ const IntroduceCard: React.FC<IntroduceCardProps> = ({ title, introduction, icon
           menuIconProps={{ iconName: 'forward', color: '#553580' }}
           className={classNames.buttonColor}
           styles={{
+            root: {
+              paddingLeft: 0,
+              marginLeft: 0
+            },
+            label: {
+              paddingLeft: 0,
+              marginLeft: 0
+            },
             menuIcon: {
               color: '#553580',
               selectors: {
