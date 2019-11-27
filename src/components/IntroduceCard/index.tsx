@@ -11,13 +11,14 @@ export interface IntroduceCardProps {
 
 const classNames = mergeStyleSets({
   title: {
-    padding: '1.7rem 0 0 1.2rem'
+    padding: '1.7rem 0 0 1.2rem',
+    lineHeight: '49px'
   },
   introduction: {
-    fontWeight: 'normal'
+    fontWeight: '400'
   },
   line: {
-    marginLeft: '2rem',
+    marginLeft: '1.2rem',
     width: '100px',
     height: '3px',
     backgroundColor: '#553580'
@@ -35,12 +36,13 @@ const classNames = mergeStyleSets({
 const IntroduceCard: React.FC<IntroduceCardProps> = ({ title, introduction, iconUrl }) => {
   return (
     <Card tokens={{
-      minWidth: '23rem'
+      minWidth: '350px',
+      width: '350px'
     }}>
       <Card.Item>
         <Stack horizontal>
-          <Text className={classNames.title} variant='xxLarge'>{title}</Text>
-          <Image src={iconUrl}/>
+          <Text className={classNames.title} variant='xxLargePlus'>{title}</Text>
+          <Image width='100px' src={iconUrl}/>
         </Stack>
       </Card.Item>
       <Card.Item>
@@ -60,6 +62,7 @@ const IntroduceCard: React.FC<IntroduceCardProps> = ({ title, introduction, icon
       >
         <Text
           variant='xLarge'
+          styles={{ root: { color: '#666' } }}
           className={classNames.introduction}
         >
           {introduction}
