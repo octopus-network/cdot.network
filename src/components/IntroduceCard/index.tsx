@@ -21,6 +21,14 @@ const classNames = mergeStyleSets({
     width: '100px',
     height: '3px',
     backgroundColor: '#553580'
+  },
+  buttonColor: {
+    color: '#553580',
+    selectors: {
+      ':hover': {
+        color: '#371761'
+      }
+    }
   }
 })
 
@@ -64,17 +72,16 @@ const IntroduceCard: React.FC<IntroduceCardProps> = ({ title, introduction, icon
       >
         <ActionButton
           text='Learn More'
-          iconProps={{ iconName: 'forward' }}
+          menuIconProps={{ iconName: 'forward', color: '#553580' }}
+          className={classNames.buttonColor}
           styles={{
-            root: {
-              color: '#553580'
-            },
-            icon: {
-              color: '#553580'
-            },
-            flexContainer: {
-              // tip: make icon on the right side, see: https://github.com/OfficeDev/office-ui-fabric-react/issues/6368
-              flexDirection: 'row-reverse'
+            menuIcon: {
+              color: '#553580',
+              selectors: {
+                ':hover': {
+                  color: '#371761'
+                }
+              }
             }
           }}
         />
