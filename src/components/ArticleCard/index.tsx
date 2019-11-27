@@ -30,8 +30,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ titleImgUrl, author, date, ti
         minWidth: '352px',
         width: '352px',
         minHeight: '527px',
-        height: '527px',
-        childrenMargin: 25
+        childrenMargin: 23
       }}
       className={classNames.newsCard}
     >
@@ -51,7 +50,8 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ titleImgUrl, author, date, ti
       <Card.Section
         styles={{
           root: {
-            color: '#666666'
+            paddingTop: '1rem',
+            color: '#666'
           }
         }}
         horizontal
@@ -64,7 +64,8 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ titleImgUrl, author, date, ti
         <Text
           styles={{
             root: {
-              fontWeight: 'bold'
+              fontWeight: '500',
+              lineHeight: '27px'
             }
           }}
           variant='large'
@@ -75,7 +76,9 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ titleImgUrl, author, date, ti
       <Card.Section
         styles={{
           root: {
-            color: '#666666'
+            color: '#666',
+            fontWeight: '400',
+            lineHeight: '22px'
           }
         }}
       >
@@ -92,6 +95,14 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ titleImgUrl, author, date, ti
           menuIconProps={{ iconName: 'forward', color: '#553580' }}
           className={classNames.buttonColor}
           styles={{
+            root: {
+              paddingLeft: 0,
+              marginLeft: 0
+            },
+            label: {
+              paddingLeft: 0,
+              marginLeft: 0
+            },
             menuIcon: {
               color: '#553580',
               selectors: {
