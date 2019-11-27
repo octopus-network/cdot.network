@@ -25,16 +25,21 @@ jobs:
         npm install --registry=https://registry.npm.taobao.org -g yarn
         yarn config set registry https://registry.npm.taobao.org
         yarn --frozen-lockfile --non-interactive
+    - name: Lint
+        run: |
+          yarn lint
+        env:
+          CI: true
     - name: Build
       run: |
         yarn build
       env:
         PUBLIC_URL: "/cdot.network/"
         CI: true
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        ACCESS_TOKEN: ${{ secrets.GH_PAT }}
-        BASE_BRANCH: dev
-        BRANCH: gh-pages
-        FOLDER: dist
+#    - name: Deploy
+#      uses: JamesIves/github-pages-deploy-action@releases/v3
+#      with:
+#        ACCESS_TOKEN: ${{ secrets.GH_PAT }}
+#        BASE_BRANCH: dev
+#        BRANCH: gh-pages
+#        FOLDER: dist
