@@ -15,6 +15,7 @@ const classNames = mergeStyleSets({
     lineHeight: '49px'
   },
   introduction: {
+    color: '#666',
     fontWeight: '400'
   },
   line: {
@@ -24,6 +25,8 @@ const classNames = mergeStyleSets({
     backgroundColor: '#553580'
   },
   buttonColor: {
+    paddingLeft: 0,
+    marginLeft: 0,
     color: '#553580',
     selectors: {
       ':hover': {
@@ -62,7 +65,6 @@ const IntroduceCard: React.FC<IntroduceCardProps> = ({ title, introduction, icon
       >
         <Text
           variant='xLarge'
-          styles={{ root: { color: '#666' } }}
           className={classNames.introduction}
         >
           {introduction}
@@ -76,12 +78,8 @@ const IntroduceCard: React.FC<IntroduceCardProps> = ({ title, introduction, icon
         <ActionButton
           text='Learn More'
           menuIconProps={{ iconName: 'forward', color: '#553580' }}
-          className={classNames.buttonColor}
           styles={{
-            root: {
-              paddingLeft: 0,
-              marginLeft: 0
-            },
+            root: classNames.buttonColor,
             label: {
               paddingLeft: 0,
               marginLeft: 0

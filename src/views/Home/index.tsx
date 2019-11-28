@@ -130,16 +130,15 @@ const ArticleArea: React.FC = () => {
         <Stack
           tokens={{
             childrenGap: '2rem',
-            padding: '0 0 5rem 0'
+            padding: '0 0 5rem 1rem'
           }}
           className={classNames.articlesArea}
           styles={{
             root: {
-              overflowX: 'auto'
+              width: '100%',
+              overflowX: 'scroll'
             }
           }}
-          horizontalAlign='center'
-          verticalAlign='center'
           horizontal
         >
           {articles.map(article => (
