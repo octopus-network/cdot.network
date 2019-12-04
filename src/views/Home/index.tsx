@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import Header from '~component/Header'
-import { Stack, mergeStyleSets, PrimaryButton, Text, Image } from 'office-ui-fabric-react'
+import { Stack, mergeStyleSets, PrimaryButton, Text, Image, Fabric } from 'office-ui-fabric-react'
 import IntroduceCard from '~component/IntroduceCard'
 import ArticleCard from '~component/ArticleCard'
 import FootBar from '~component/FootBar'
@@ -47,12 +47,22 @@ const IntroductionArea: React.FC = () => {
         <Stack.Item styles={{
           root: {
             paddingTop: '2rem',
-            paddingBottom: '4rem'
+            paddingBottom: '4rem',
+            width: '100%'
           }
         }} align='center'>
           <Stack tokens={{
             childrenGap: '2rem'
-          }} horizontal>
+          }}
+          styles={{
+            root: {
+              width: '100%',
+              overflowX: 'auto'
+            }
+          }}
+          horizontalAlign='center'
+          horizontal
+          >
             <IntroduceCard
               title='Seamless Interoperation'
               introduction='Ledgers of any type may get involved effortlessly in this internet of value.'
@@ -99,7 +109,7 @@ const IntroductionArea: React.FC = () => {
           }}
           align='center'
         >
-          <Image src='/assets/images/content3_icon_bg_default.png'/>
+          {/* <Image src='/assets/images/content3_icon_bg_default.png'/> */}
         </Stack.Item>
       </Stack>
     </Fragment>
@@ -136,13 +146,14 @@ const ArticleArea: React.FC = () => {
           styles={{
             root: {
               width: '100%',
-              overflowX: 'scroll'
+              overflowX: 'auto'
             }
           }}
+          horizontalAlign='space-between'
           horizontal
         >
           {articles.map(article => (
-            <Stack.Item align='stretch' key={article.description}>
+            <Stack.Item key={article.description}>
               <ArticleCard
                 {...article}
               />
@@ -162,7 +173,7 @@ const ArticleArea: React.FC = () => {
 
 const HomePage: React.FC = () => {
   return (
-    <Fragment>
+    <Fabric>
       <Header items={[
         { name: 'Github', url: 'https://github.com/cdot-network' },
         { name: 'WhitePaper', url: '/contact' },
@@ -171,7 +182,7 @@ const HomePage: React.FC = () => {
       <IntroductionArea/>
       <ArticleArea/>
       <FootBar/>
-    </Fragment>
+    </Fabric>
   )
 }
 
