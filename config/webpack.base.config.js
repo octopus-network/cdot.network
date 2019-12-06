@@ -3,6 +3,7 @@ require('dotenv').config()
 const os = require('os')
 const isWsl = require('is-wsl')
 const { resolve } = require('path')
+const { DefinePlugin } = require('webpack')
 const HappyPack = require('happypack')
 const ManifestPlugin = require('webpack-manifest-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -170,7 +171,10 @@ exports.config = {
       {
         from: resolve(__dirname, '..', 'src', 'assets'),
         to: resolve(__dirname, '..', 'dist', 'assets')
-      }])
+      }]),
+    new DefinePlugin({
+      PUBLIC_URL: process.env.PUBLIC_URL
+    })
   ].filter(Boolean),
   performance: {
     hints: false
