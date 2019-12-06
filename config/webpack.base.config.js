@@ -120,7 +120,7 @@ exports.config = {
       )
     ),
     new InterpolateHtmlPlugin(HtmlWebpackPlugin, {
-      PUBLIC_URL: ''
+      PUBLIC_URL: process.env.PUBLIC_URL || '/'
     }),
     new ForkTsCheckerWebpackPlugin({
       checkSyntacticErrors: true,
@@ -160,7 +160,7 @@ exports.config = {
     // having to parse `index.html`.
     new ManifestPlugin({
       fileName: 'manifest.json',
-      publicPath: '/'
+      publicPath: process.env.PUBLIC_URL || '/'
     }),
     new CopyPlugin([
       {
