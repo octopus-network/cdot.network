@@ -1,6 +1,7 @@
 {
   "root": false,
   "globals": {
-    "DEBUG": true
+    "DEBUG": true,
+    "PUBLIC_URL": true
   }
 }

@@ -43,5 +43,3 @@ jobs:
         BASE_BRANCH: dev
         BRANCH: gh-pages
         FOLDER: dist
-
-# tag
