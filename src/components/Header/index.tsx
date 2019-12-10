@@ -1,5 +1,5 @@
 import React from 'react'
-import { mergeStyleSets, Text } from 'office-ui-fabric-react'
+import { mergeStyleSets, Stack, Text } from 'office-ui-fabric-react'
 
 export interface HeaderProps {
   items: {
@@ -13,7 +13,7 @@ const classNames = mergeStyleSets({
     display: 'flex',
     height: '900px',
     background: 'no-repeat center center',
-    backgroundImage: 'url(/assets/images/banner_img_bg_default.png)',
+    backgroundColor: 'black',
     backgroundAttachment: 'scroll',
     backgroundSize: 'cover',
     flexDirection: 'column',
@@ -49,6 +49,10 @@ const classNames = mergeStyleSets({
   sayingText: {
     color: 'white',
     fontWeight: 'lighter'
+  },
+  companyText: {
+    color: 'white',
+    fontWeight: 'bolder'
   }
 })
 
@@ -74,24 +78,26 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
   return (
     <div className={classNames.header}>
       <CommandBar items={items}/>
-      <img src='/assets/images/banner_img_logo_default.png' alt='logo'/>
-      <Text
-        variant='mega'
-        className={classNames.sayingText}
-        style={{
-          padding: '0 9rem'
-        }}
-      >
-        our earth is only one polka dot among a million stars in the cosmos
-      </Text>
-      <Text variant='xxLargePlus'
-        className={classNames.sayingText}
-        style={{
-          marginLeft: '3rem'
-        }}
-      >
-        - Yayoi Kusama
-      </Text>
+      <Stack tokens={{
+        padding: '0 5rem'
+      }}>
+        <Stack.Item>
+          <Text
+            variant='mega'
+            className={classNames.companyText}
+          >
+            Cdot.
+          </Text>
+        </Stack.Item>
+        <Stack.Item>
+          <Text
+            variant='mega'
+            className={classNames.sayingText}
+          >
+        A secured Hub to serve heterogeneous ledgers for assert transfer
+          </Text>
+        </Stack.Item>
+      </Stack>
     </div>
   )
 }
