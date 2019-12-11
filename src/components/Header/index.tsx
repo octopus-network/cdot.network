@@ -43,15 +43,13 @@ const classNames = mergeStyleSets({
     flexDirection: 'row'
   },
   commandBarItem: {
-    color: 'white',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    fontWeight: 'bolder'
   },
   sayingText: {
-    color: 'white',
     fontWeight: 'lighter'
   },
   companyText: {
-    color: 'white',
     fontWeight: 'bolder'
   }
 })
@@ -68,7 +66,6 @@ const CommandBar: React.FC<Pick<HeaderProps, 'items'>> = ({ items }) => {
           }} key={item.name} href={item.url || '#'}>
             {item.name}
           </a>))}
-        <span>EN</span>
       </div>
     </div>
   )

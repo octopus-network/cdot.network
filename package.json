@@ -25,7 +25,7 @@
     "mobx-react": "^6.1.4",
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
-    "office-ui-fabric-react": "^7.63.0",
+    "office-ui-fabric-react": "^7.70.0",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-app-polyfill": "^1.0.4",
