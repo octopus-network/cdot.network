@@ -1,9 +1,16 @@
 import { hot } from 'react-hot-loader' // react-hot-loader before react and react-dom, see https://github.com/gaearon/react-hot-loader#getting-started
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { loadTheme } from 'office-ui-fabric-react/lib/Styling'
 import * as serviceWorker from './serviceWorker'
 import './index.less'
 import App from './App'
+
+loadTheme({
+  defaultFontStyle: {
+    color: 'white'
+  }
+})
 
 if (process.env.NODE_ENV === 'production') {
   ReactDOM.render(<App/>, document.getElementById('root'))

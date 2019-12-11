@@ -46,6 +46,7 @@ const FootBar: React.FC = () => {
                 tokens={{
                   childrenGap: '3rem'
                 }}
+                wrap
                 horizontal
                 verticalAlign='center'
               >

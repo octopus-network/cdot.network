@@ -11,9 +11,9 @@ const HomePage: React.FC = () => {
   return (
     <Fabric>
       <Header items={[
+        { name: 'About', url: '/contact' },
         { name: 'Github', url: 'https://github.com/cdot-network' },
-        { name: 'WhitePaper', url: '/contact' },
-        { name: 'Follow us', url: '/contact' }
+        { name: 'Blog', url: '/contact' }
       ]}/>
       <FootBar/>
     </Fabric>
