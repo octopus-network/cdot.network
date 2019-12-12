@@ -1,5 +1,5 @@
 import React from 'react'
-import { mergeStyleSets, Stack, Text } from 'office-ui-fabric-react'
+import { mergeStyleSets, mergeStyles, Stack, Text } from 'office-ui-fabric-react'
 
 export interface HeaderProps {
   items: {
@@ -9,7 +9,7 @@ export interface HeaderProps {
 }
 
 const classNames = mergeStyleSets({
-  header: {
+  banner: {
     display: 'flex',
     height: '900px',
     background: 'no-repeat center center',
@@ -21,30 +21,40 @@ const classNames = mergeStyleSets({
     alignContent: 'center',
     justifyContent: 'center'
   },
+  bannerImage: {
+    backgroundImage: 'url(/assets/images/banner_img_bg.png)',
+    selectors: {
+      '@media(min-width: 1024px)': {
+        backgroundImage: 'url(/assets/images/banner_img_bg@2x.png)'
+      }
+    }
+  },
   commandBar: {
     position: 'absolute',
-    display: 'flex',
-    alignItems: 'center',
-    flexDirection: 'row-reverse',
     top: 0,
     left: 0,
     width: '100%',
     height: '100px',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     background: 'transparent',
     color: 'white'
   },
+  commandBarTitle: {
+    marginLeft: '5rem',
+    fontSize: '30px',
+    color: '#fff'
+  },
   commandBarItems: {
-    float: 'right',
-    marginRight: '1rem',
-    paddingRight: '3rem',
-    left: '10px',
-    fontSize: '24px',
-    display: 'flex',
-    flexDirection: 'row'
+    marginRight: '5rem',
+    fontSize: '24px'
   },
   commandBarItem: {
+    color: '#DEDEDE',
     textDecoration: 'none',
-    fontWeight: 'bolder'
+    fontWeight: '400'
   },
   sayingText: {
     fontWeight: 'lighter'
@@ -57,12 +67,14 @@ const classNames = mergeStyleSets({
 const CommandBar: React.FC<Pick<HeaderProps, 'items'>> = ({ items }) => {
   return (
     <div className={classNames.commandBar}>
+      <div className={classNames.commandBarTitle}>
+        <span>cdot.network</span>
+      </div>
       <div className={classNames.commandBarItems}>
         {items.map((item, index) => (
           // todo: use Link on 'react-router-dom'
           <a className={classNames.commandBarItem} style={{
-            paddingLeft: index ? '2rem' : 0,
-            paddingRight: index === (items.length - 1) ? '2rem' : 0 // 最后一个 element 给 切换语言按钮 padding
+            paddingLeft: index ? '5rem' : 0
           }} key={item.name} href={item.url || '#'}>
             {item.name}
           </a>))}
@@ -73,7 +85,7 @@ const CommandBar: React.FC<Pick<HeaderProps, 'items'>> = ({ items }) => {
 
 const Header: React.FC<HeaderProps> = ({ items }) => {
   return (
-    <div className={classNames.header}>
+    <div className={mergeStyles(classNames.bannerImage, classNames.banner)}>
       <CommandBar items={items}/>
       <Stack tokens={{
         padding: '0 5rem'
