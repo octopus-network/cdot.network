@@ -23,6 +23,7 @@ const classNames = mergeStyleSets({
   banner: {
     marginTop: '64px',
     paddingTop: '9rem',
+    paddingBottom: '5rem',
     height: '100%',
     width: '100%',
     background: 'no-repeat center center',
