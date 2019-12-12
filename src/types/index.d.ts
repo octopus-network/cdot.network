@@ -6,3 +6,12 @@ export interface Article {
   date: string
   to: string
 }
+
+export interface Introduction {
+  title: string
+  description: string
+  imgUrl: {
+    default: string
+    large: string
+  }
+}
