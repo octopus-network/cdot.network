@@ -1,5 +1,8 @@
 import React from 'react'
-import { mergeStyleSets, mergeStyles, Stack, Text, PrimaryButton } from 'office-ui-fabric-react'
+import {
+  mergeStyleSets, mergeStyles, Stack, Text, PrimaryButton,
+  CommandBar as FabricCommandBar
+} from 'office-ui-fabric-react'
 
 export interface HeaderProps {
   items: {
@@ -50,7 +53,21 @@ const classNames = mergeStyleSets({
   commandBarTitle: {
     marginLeft: '5rem',
     fontSize: '30px',
-    color: '#fff'
+    color: '#fff',
+    selectors: {
+      '@media(max-width: 640px)': {
+        marginLeft: '1rem'
+      }
+    }
+  },
+  narrowCommandBar: {
+    display: 'none',
+    backgroundColor: 'transparent',
+    selectors: {
+      '@media(max-width: 640px)': {
+        display: 'initial'
+      }
+    }
   },
   commandBarItems: {
     marginRight: '5rem',
@@ -59,11 +76,29 @@ const classNames = mergeStyleSets({
   commandBarItem: {
     color: '#DEDEDE',
     textDecoration: 'none',
-    fontWeight: '400'
+    fontWeight: '400',
+    paddingLeft: '5rem',
+    selectors: {
+      '@media(max-width: 640px)': {
+        display: 'none'
+      }
+    }
+  },
+  textArea: {
+    selectors: {
+      '@media(max-width: 640px)': {
+        padding: '0 1rem'
+      }
+    }
   },
   sayingText: {
     color: '#CACACA',
-    fontWeight: 'lighter'
+    fontWeight: 'lighter',
+    selectors: {
+      '@media(max-width: 640px)': {
+        fontSize: '40px'
+      }
+    }
   },
   companyText: {
     fontSize: '90px',
@@ -80,12 +115,19 @@ const CommandBar: React.FC<Pick<HeaderProps, 'items'>> = ({ items }) => {
       <div className={classNames.commandBarItems}>
         {items.map((item, index) => (
           // todo: use Link on 'react-router-dom'
-          <a className={classNames.commandBarItem} style={{
-            paddingLeft: index ? '5rem' : 0
-          }} key={item.name} href={item.url || '#'}>
+          <a className={classNames.commandBarItem} key={item.name} href={item.url || '#'}>
             {item.name}
           </a>))}
       </div>
+      <FabricCommandBar
+        className={classNames.narrowCommandBar}
+        styles={{
+          root: {
+            backgroundColor: 'transparent'
+          }
+        }}
+        items={[]}
+        overflowItems={items.map(item => ({ key: item.name, text: item.name }))}/>
     </div>
   )
 }
@@ -95,10 +137,13 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
     <div className={mergeStyles(classNames.nav)}>
       <CommandBar items={items}/>
       <div className={classNames.banner}>
-        <Stack tokens={{
-          padding: '0 7rem',
-          childrenGap: '40px'
-        }}>
+        <Stack
+          styles={{ root: classNames.textArea }}
+          tokens={{
+            padding: '0 7rem',
+            childrenGap: '40px'
+          }}
+        >
           <Stack.Item>
             <Text
               className={classNames.companyText}
