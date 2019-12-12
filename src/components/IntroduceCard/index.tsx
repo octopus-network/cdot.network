@@ -1,100 +1,85 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card } from '@uifabric/react-cards'
-import { Text, mergeStyleSets, Image, Stack, ActionButton } from 'office-ui-fabric-react'
+import { Text, Image, mergeStyleSets } from 'office-ui-fabric-react'
+import { Introduction } from '~type/index'
 
-export interface IntroduceCardProps {
-  title: string
-  iconUrl: string
-  introduction: string
-  to: string
+export interface IntroduceCardProps extends Introduction {
+  to?: string
 }
 
 const classNames = mergeStyleSets({
-  title: {
-    padding: '1.7rem 0 0 1.2rem',
-    lineHeight: '49px'
-  },
-  introduction: {
-    color: '#666',
-    fontWeight: '400'
-  },
-  line: {
-    marginLeft: '1.2rem',
-    width: '100px',
-    height: '3px',
-    backgroundColor: '#553580'
-  },
-  buttonColor: {
-    paddingLeft: 0,
-    marginLeft: 0,
-    color: '#553580',
+  root: {
+    width: '650px',
+    minWidth: '650px',
+    height: '174px',
     selectors: {
-      ':hover': {
-        color: '#371761'
+      '@media(max-width: 1024px)': {
+        minWidth: '100%',
+        width: '100%'
+      }
+    }
+  },
+  iconArea: {
+    padding: '1rem',
+    selectors: {
+      '@media(max-width: 1024px)': {
+        padding: '0.6rem'
       }
     }
   }
 })
 
-const IntroduceCard: React.FC<IntroduceCardProps> = ({ title, introduction, iconUrl }) => {
+const IntroduceCard: React.FC<IntroduceCardProps> = ({ title, description, imgUrl }) => {
+  const [width, setWidth] = useState(window.screen.width)
+  useEffect(() => {
+    const onResize = () => {
+      setWidth(window.screen.width)
+    }
+    window.addEventListener('resize', onResize)
+    return () => {
+      window.removeEventListener('resize', onResize)
+    }
+  }, [])
   return (
-    <Card tokens={{
-      minWidth: '350px',
-      width: '350px'
-    }}>
-      <Card.Item>
-        <Stack horizontal>
-          <Text className={classNames.title} variant='xxLargePlus'>{title}</Text>
-          <Image width='100px' src={iconUrl}/>
-        </Stack>
+    <Card
+      horizontal
+      className={classNames.root}
+      styles={{
+        root: {
+          backgroundColor: '#0B0C0E',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }
+      }}
+    >
+      <Card.Item className={classNames.iconArea}>
+        <Image width={width > 1024 ? 86 : 64} height={width > 1024 ? 86 : 64} src={width > 640 ? imgUrl.large : imgUrl.default}/>
       </Card.Item>
-      <Card.Item>
-        <div className={classNames.line}/>
-      </Card.Item>
-      <Card.Section
-        horizontalAlign='center'
-        verticalAlign='center'
-        tokens={{
-          padding: '1rem 1.2rem'
-        }}
-        styles={{
+      <Card.Section>
+        <Text styles={{
           root: {
-            height: '8rem'
-          }
-        }}
-      >
-        <Text
-          variant='xLarge'
-          className={classNames.introduction}
-        >
-          {introduction}
-        </Text>
-      </Card.Section>
-      <Card.Item
-        tokens={{
-          padding: '1rem 1.2rem'
-        }}
-      >
-        <ActionButton
-          text='Learn More'
-          menuIconProps={{ iconName: 'forward', color: '#553580' }}
-          styles={{
-            root: classNames.buttonColor,
-            label: {
-              paddingLeft: 0,
-              marginLeft: 0
-            },
-            menuIcon: {
-              color: '#553580',
-              selectors: {
-                ':hover': {
-                  color: '#371761'
-                }
+            fontSize: '28px',
+            fontWeight: '400',
+            color: '#fff',
+            selectors: {
+              '@media(max-width: 1024px)': {
+                fontSize: '18px'
               }
             }
-          }}
-        />
-      </Card.Item>
+          }
+        }}>{title}</Text>
+        <Text styles={{
+          root: {
+            fontSize: '20px',
+            color: '#BCBCBC',
+            selectors: {
+              '@media(max-width: 1024px)': {
+                fontSize: '15px'
+              }
+            }
+          }
+        }} block>{description}</Text>
+      </Card.Section>
     </Card>
   )
 }
