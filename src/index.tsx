@@ -8,8 +8,11 @@ import App from './App'
 
 loadTheme({
   defaultFontStyle: {
-    fontFamily: 'Alata, Alata-Regular',
+    fontFamily: 'Alata, Alata-Regular, sans-serif',
     color: 'white'
+  },
+  palette: {
+    themePrimary: '#DBDBDB'
   }
 })
 

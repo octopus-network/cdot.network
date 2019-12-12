@@ -1,5 +1,5 @@
 import React from 'react'
-import { mergeStyleSets, mergeStyles, Stack, Text } from 'office-ui-fabric-react'
+import { mergeStyleSets, mergeStyles, Stack, Text, PrimaryButton } from 'office-ui-fabric-react'
 
 export interface HeaderProps {
   items: {
@@ -9,19 +9,23 @@ export interface HeaderProps {
 }
 
 const classNames = mergeStyleSets({
-  banner: {
+  nav: {
     display: 'flex',
-    height: '900px',
-    background: 'no-repeat center center',
-    backgroundColor: 'black',
-    backgroundAttachment: 'scroll',
-    backgroundSize: 'cover',
+    height: '867px',
     flexDirection: 'column',
     alignItems: 'center',
     alignContent: 'center',
     justifyContent: 'center'
   },
-  bannerImage: {
+  banner: {
+    marginTop: '64px',
+    paddingTop: '9rem',
+    height: '100%',
+    width: '100%',
+    background: 'no-repeat center center',
+    backgroundColor: 'black',
+    backgroundAttachment: 'scroll',
+    backgroundSize: 'cover',
     backgroundImage: 'url(/assets/images/banner_img_bg.png)',
     selectors: {
       '@media(min-width: 1024px)': {
@@ -34,13 +38,14 @@ const classNames = mergeStyleSets({
     top: 0,
     left: 0,
     width: '100%',
-    height: '100px',
+    height: '64px',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     background: 'transparent',
-    color: 'white'
+    color: 'white',
+    backgroundColor: '#000'
   },
   commandBarTitle: {
     marginLeft: '5rem',
@@ -57,10 +62,12 @@ const classNames = mergeStyleSets({
     fontWeight: '400'
   },
   sayingText: {
+    color: '#CACACA',
     fontWeight: 'lighter'
   },
   companyText: {
-    fontWeight: 'bolder'
+    fontSize: '90px',
+    fontWeight: '900'
   }
 })
 
@@ -85,28 +92,42 @@ const CommandBar: React.FC<Pick<HeaderProps, 'items'>> = ({ items }) => {
 
 const Header: React.FC<HeaderProps> = ({ items }) => {
   return (
-    <div className={mergeStyles(classNames.bannerImage, classNames.banner)}>
+    <div className={mergeStyles(classNames.nav)}>
       <CommandBar items={items}/>
-      <Stack tokens={{
-        padding: '0 5rem'
-      }}>
-        <Stack.Item>
-          <Text
-            variant='mega'
-            className={classNames.companyText}
-          >
-            Cdot.
-          </Text>
-        </Stack.Item>
-        <Stack.Item>
-          <Text
-            variant='mega'
-            className={classNames.sayingText}
-          >
+      <div className={classNames.banner}>
+        <Stack tokens={{
+          padding: '0 7rem',
+          childrenGap: '40px'
+        }}>
+          <Stack.Item>
+            <Text
+              className={classNames.companyText}
+            >
+            cdot.
+            </Text>
+          </Stack.Item>
+          <Stack.Item>
+            <Text
+              variant='mega'
+              className={classNames.sayingText}
+            >
         A secured Hub to serve heterogeneous ledgers for assert transfer
-          </Text>
-        </Stack.Item>
-      </Stack>
+            </Text>
+          </Stack.Item>
+          <Stack.Item>
+            <PrimaryButton styles={{
+              root: {
+                height: '53px',
+                width: '183px'
+              },
+              label: {
+                color: '#030303',
+                fontWeight: '400'
+              }
+            }}>Get started</PrimaryButton>
+          </Stack.Item>
+        </Stack>
+      </div>
     </div>
   )
 }
