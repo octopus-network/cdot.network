@@ -52,8 +52,13 @@ const IntroduceCard: React.FC<IntroduceCardProps> = ({ title, description, imgUr
         }
       }}
     >
-      <Card.Item className={classNames.iconArea}>
-        <Image width={width > 1024 ? 86 : 64} height={width > 1024 ? 86 : 64} src={width > 640 ? imgUrl.large : imgUrl.default}/>
+      <Card.Item>
+        <Image
+          className={classNames.iconArea}
+          width={width > 1024 ? 86 : 64}
+          height={width > 1024 ? 86 : 64}
+          src={width > 640 ? imgUrl.large : imgUrl.default}
+        />
       </Card.Item>
       <Card.Section>
         <Text styles={{
