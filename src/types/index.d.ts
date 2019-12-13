@@ -1,9 +1,6 @@
-export interface Article {
-  titleImgUrl: string
+export interface News {
   title: string
   description: string
-  author: string
-  date: string
   to: string
 }
 
