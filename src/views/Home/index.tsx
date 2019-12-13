@@ -1,13 +1,14 @@
 import React from 'react'
 import Header from '~component/Header'
 import { Fabric, mergeStyles } from 'office-ui-fabric-react'
-import { Article, Partner } from '~type/index'
-import { article1, article2, article3, article4 } from '~data/articles'
+import { News, Partner } from '~type/index'
+import { news1, news2, news3, news4 } from '~data/news'
 import IntroductionArea from './IntroductionArea'
 import PartnersArea from './PartnersArea'
 import { oneBlockPlus, polkabase, polkadot, rustcc } from '~data/partners'
+import NewsArea from '~view/Home/NewsArea'
 
-const articles: Article[] = [article1, article2, article3, article4]
+const news: News[] = [news1, news2, news3, news4]
 const partners: Partner[] = [polkadot, rustcc, polkabase, oneBlockPlus]
 
 const HomePage: React.FC = () => {
@@ -21,6 +22,7 @@ const HomePage: React.FC = () => {
         { name: 'Blog', url: '/contact' }
       ]}/>
       <IntroductionArea/>
+      <NewsArea news={news}/>
       <PartnersArea partners={partners}/>
     </Fabric>
   )
