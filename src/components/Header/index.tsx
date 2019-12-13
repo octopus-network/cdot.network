@@ -124,7 +124,8 @@ const CommandBar: React.FC<Pick<HeaderProps, 'items'>> = ({ items }) => {
         className={classNames.narrowCommandBar}
         styles={{
           root: {
-            backgroundColor: 'transparent'
+            backgroundColor: 'transparent',
+            padding: 0
           }
         }}
         items={[]}
