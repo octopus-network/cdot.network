@@ -55,7 +55,7 @@ const PartnersArea: React.FC<NewsAreaProps> = ({ partners }) => {
           </Text>
         </Stack.Item>
         <Stack.Item styles={{ root: { width: '100%' } }} align='center'>
-          <Stack horizontal={width > 1024}>
+          <Stack horizontal={width > 1024} horizontalAlign='center'>
             {partners.map(({ name, imgUrl, width, height }) => (
               <Stack.Item key={name}>
                 <Card
