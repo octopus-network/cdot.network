@@ -112,7 +112,7 @@ const NewsArea: React.FC<NewsAreaProps> = ({ news }) => {
             {news.map(({ title, description, to }) => (
               <Card
                 className={classNames.card}
-                key={name}
+                key={title}
               >
                 <Card.Section
                   tokens={{ childrenGap: width > 1024 ? '3rem' : 10 }}
