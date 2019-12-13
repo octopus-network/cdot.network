@@ -15,3 +15,13 @@ export interface Introduction {
     large: string
   }
 }
+
+export interface Partner {
+  name: string
+  imgUrl: {
+    default: string
+    large: string
+  },
+  width: number
+  height: number
+}
