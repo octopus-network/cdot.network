@@ -80,6 +80,8 @@ const IntroductionArea: React.FC = () => {
       <Stack
         className={classNames.banner}
         horizontal={width > 1024}
+        verticalAlign='center'
+        horizontalAlign='space-between'
       >
         <Stack.Item>
           <Stack
@@ -116,14 +118,19 @@ const IntroductionArea: React.FC = () => {
           </Stack>
         </Stack.Item>
         <Stack.Item>
-          <Stack tokens={{
-            childrenGap: 25
-          }}>
+          <Stack
+            styles={{
+              root: {
+                paddingRight: width > 1024 ? '10rem' : 0
+              }
+            }}
+            tokens={{
+              childrenGap: 25
+            }}
+          >
             {
               introductions.map(introduction => (
-                <Stack.Item key={introduction.title}>
-                  <IntroduceCard {...introduction}/>
-                </Stack.Item>
+                <IntroduceCard key={introduction.title} {...introduction}/>
               ))
             }
           </Stack>
