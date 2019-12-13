@@ -42,6 +42,11 @@ const lessLoaders = [
   }
 ]
 
+const scssLoaders = [
+  ...cssLoaders,
+  'sass-loader'
+]
+
 const imageInlineSizeLimit = parseInt(
   process.env.IMAGE_INLINE_SIZE_LIMIT || '10000'
 )
@@ -87,8 +92,12 @@ exports.config = {
         }
       },
       {
-        test: /\.less$/,
+        test: /\.less$/i,
         use: lessLoaders
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: scssLoaders
       }
     ]
   },
