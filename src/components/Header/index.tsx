@@ -30,10 +30,10 @@ const classNames = mergeStyleSets({
     backgroundColor: 'black',
     backgroundAttachment: 'scroll',
     backgroundSize: 'cover',
-    backgroundImage: 'url(/assets/images/banner_img_bg.png)',
+    backgroundImage: 'url(/assets/images/background/bg1.png)',
     selectors: {
       '@media(min-width: 1024px)': {
-        backgroundImage: 'url(/assets/images/banner_img_bg@2x.png)'
+        backgroundImage: 'url(/assets/images/background/bg1@2x.png)'
       }
     }
   },
