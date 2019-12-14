@@ -12,7 +12,28 @@ loadTheme({
     color: 'white'
   },
   palette: {
-    themePrimary: '#DBDBDB'
+    themePrimary: '#DBDBDB',
+    themeLighterAlt: '#eff6fc',
+    themeLighter: '#deecf9',
+    themeLight: '#c7e0f4',
+    themeTertiary: '#FFFFFF',
+    themeSecondary: '#E0E0E0',
+    themeDarkAlt: '#E0E0E0',
+    themeDark: '#E0E0E0',
+    themeDarker: '#939496',
+    neutralLighterAlt: '#f8f8f8',
+    neutralLighter: '#f4f4f4',
+    neutralLight: '#eaeaea',
+    neutralQuaternaryAlt: '#dadada',
+    neutralQuaternary: '#d0d0d0',
+    neutralTertiaryAlt: '#c8c8c8',
+    neutralTertiary: '#c2c2c2',
+    neutralSecondary: '#858585',
+    neutralPrimaryAlt: '#4b4b4b',
+    neutralPrimary: '#333333',
+    neutralDark: '#272727',
+    black: '#1d1d1d',
+    white: '#ffffff'
   }
 })
 
