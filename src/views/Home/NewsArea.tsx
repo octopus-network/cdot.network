@@ -105,6 +105,7 @@ const NewsArea: React.FC<NewsAreaProps> = ({ news }) => {
             tokens={{
               childrenGap: width > 1024 ? 44 : 10
             }}
+            wrap
             horizontalAlign='center'
             verticalAlign='center'
             horizontal={width > 1024}
