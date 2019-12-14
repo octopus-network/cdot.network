@@ -97,7 +97,7 @@ const NewsArea: React.FC<NewsAreaProps> = ({ news }) => {
       }}>
         <Stack.Item align='center'>
           <Text className={classNames.newsTitle}>
-            Partners
+            Latest News
           </Text>
         </Stack.Item>
         <Stack.Item styles={{ root: { width: '100%' } }} align='center'>
