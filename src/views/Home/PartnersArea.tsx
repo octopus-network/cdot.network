@@ -34,7 +34,7 @@ const classNames = mergeStyleSets({
 })
 
 const PartnersArea: React.FC<NewsAreaProps> = ({ partners }) => {
-  const [width, setWidth] = useState(window.screen.width)
+  const [screenWidth, setWidth] = useState(window.screen.width)
   useEffect(() => {
     const onResize = () => {
       setWidth(window.screen.width)
@@ -55,7 +55,7 @@ const PartnersArea: React.FC<NewsAreaProps> = ({ partners }) => {
           </Text>
         </Stack.Item>
         <Stack.Item styles={{ root: { width: '100%' } }} align='center'>
-          <Stack horizontal={width > 1024} horizontalAlign='center'>
+          <Stack wrap tokens={{ childrenGap: 20 }} horizontal horizontalAlign='center'>
             {partners.map(({ name, imgUrl, width, height }) => (
               <Stack.Item key={name}>
                 <Card
@@ -65,7 +65,7 @@ const PartnersArea: React.FC<NewsAreaProps> = ({ partners }) => {
                     <Image
                       width={width}
                       height={height}
-                      src={width > 640 ? imgUrl.large : imgUrl.default}
+                      src={screenWidth > 640 ? imgUrl.large : imgUrl.default}
                     />
                   </Card.Section>
                 </Card>
