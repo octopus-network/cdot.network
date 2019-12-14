@@ -158,7 +158,7 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
               variant='mega'
               className={classNames.sayingText}
             >
-        A secured Hub to serve heterogeneous ledgers for assert transfer
+        A secured hub to serve heterogeneous ledgers for asset transfer
             </Text>
           </Stack.Item>
           <Stack.Item>
