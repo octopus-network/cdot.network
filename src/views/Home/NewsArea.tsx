@@ -51,6 +51,18 @@ const classNames = mergeStyleSets({
       '@media(max-width: 1920px)': {
         width: '398px',
         height: '424px'
+      },
+      ':hover': {
+        backgroundColor: '#E0E0E0',
+        transition: 'ease-in-out 0.5s',
+        selectors: {
+          ':hover span': {
+            color: '#000'
+          },
+          ':hover .cdot-hover-description': {
+            color: '#666'
+          }
+        }
       }
     }
   },
@@ -77,17 +89,6 @@ const classNames = mergeStyleSets({
         fontSize: '18px'
       }
     }
-  },
-  cardButton: {
-    backgroundColor: 'transparent',
-    border: 'none',
-    width: '150px'
-  },
-  cardButtonLabel: {
-    width: '103px',
-    fontSize: '20px',
-    fontWeight: '400',
-    color: '#fff'
   }
 })
 
@@ -132,13 +133,25 @@ const NewsArea: React.FC<NewsAreaProps> = ({ news }) => {
                   className={classNames.cardBody}
                 >
                   <Text className={classNames.cardTitle}>{title}</Text>
-                  <Text className={classNames.cardDescription}>{description}</Text>
+                  <Text className={mergeStyles('cdot-hover-description', classNames.cardDescription)}>{description}</Text>
                 </Card.Section>
                 <Card.Section>
                   <DefaultButton
                     styles={{
-                      root: classNames.cardButton,
-                      label: classNames.cardButtonLabel
+                      root: {
+                        backgroundColor: 'transparent',
+                        border: 'none',
+                        width: '150px'
+                      },
+                      rootHovered: {
+                        backgroundColor: 'transparent'
+                      },
+                      label: {
+                        width: '103px',
+                        fontSize: '20px',
+                        fontWeight: '400',
+                        color: '#fff'
+                      }
                     }}
                   >
                     Learn more

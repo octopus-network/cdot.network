@@ -165,13 +165,20 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
             <PrimaryButton styles={{
               root: {
                 height: '53px',
-                width: '183px'
+                width: '183px',
+                transition: 'ease-in-out 0.2s'
+              },
+              rootHovered: {
+                backgroundColor: '#fff',
+                transition: 'ease-in-out 0.2s'
               },
               label: {
                 color: '#030303',
                 fontWeight: '400'
               }
-            }}>Get started</PrimaryButton>
+            }}>
+              Get started
+            </PrimaryButton>
           </Stack.Item>
         </Stack>
       </div>
