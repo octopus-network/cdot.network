@@ -119,6 +119,26 @@ export const participant5: Participant = {
           backgroundColor: '#222737'
         }}
       >
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}>
+          <div style={{
+            backgroundColor: '#C754FF',
+            height: '23px',
+            borderRadius: '50px',
+            width: '23px'
+          }}/>
+          <div style={{
+            backgroundColor: '#C754FF',
+            marginTop: '4px',
+            borderRadius: '10px',
+            width: '40px',
+            height: '20px'
+          }}/>
+        </div>
       </ParticipantCircle>
     )
   }
