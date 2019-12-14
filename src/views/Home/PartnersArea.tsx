@@ -24,7 +24,7 @@ const classNames = mergeStyleSets({
     justifyContent: 'center',
     alignItems: 'center',
     selectors: {
-      '@media(max-width: 1024px)': {
+      '@media(max-width: 1023px)': {
         margin: '0 0 1rem',
         width: '100%',
         minWidth: '100%'

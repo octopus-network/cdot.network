@@ -9,6 +9,8 @@ import IntroductionArea from './IntroductionArea'
 import PartnersArea from './PartnersArea'
 import NewsArea from './NewsArea'
 import ParticipantsArea from './ParticipantsArea'
+import FootBar from '~component/FootBar'
+
 import './index.scss'
 
 const news: News[] = [news1, news2, news3, news4]
@@ -29,6 +31,7 @@ const HomePage: React.FC = () => {
       <ParticipantsArea participants={participants}/>
       <NewsArea news={news}/>
       <PartnersArea partners={partners}/>
+      <FootBar/>
     </Fabric>
   )
 }
