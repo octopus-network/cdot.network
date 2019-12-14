@@ -1,3 +1,5 @@
+import React from 'react'
+
 export interface News {
   title: string
   description: string
@@ -18,7 +20,13 @@ export interface Partner {
   imgUrl: {
     default: string
     large: string
-  },
+  }
   width: number
   height: number
+}
+
+export interface Participant {
+  title: string
+  description: string
+  icon: () => React.ReactElement
 }
