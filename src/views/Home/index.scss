@@ -4,6 +4,12 @@
   color: white
 }
 
+.cdot-text-gradual-change {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent
+}
+
 html,
 body {
   /* stylelint-disable font-family-no-missing-generic-family-keyword */
