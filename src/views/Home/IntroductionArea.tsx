@@ -23,6 +23,9 @@ const classNames = mergeStyleSets({
     selectors: {
       '@media(min-width: 1024px)': {
         backgroundImage: 'url(/assets/images/background/bg2@2x.png)'
+      },
+      '@media(max-width: 1024px)': {
+        flexDirection: 'column'
       }
     }
   },
@@ -79,7 +82,7 @@ const IntroductionArea: React.FC = () => {
     <div className={classNames.root}>
       <Stack
         className={classNames.banner}
-        horizontal={width > 1024}
+        horizontal
         verticalAlign='center'
         horizontalAlign='space-between'
       >
@@ -121,7 +124,13 @@ const IntroductionArea: React.FC = () => {
           <Stack
             styles={{
               root: {
-                paddingRight: width > 1024 ? '10rem' : 0
+                paddingRight: '10rem',
+                selectors: {
+                  '@media(max-width: 1024px)': {
+                    paddingRight: '0',
+                    paddingTop: '1rem'
+                  }
+                }
               }
             }}
             tokens={{
