@@ -68,16 +68,6 @@ const classNames = mergeStyleSets({
 })
 
 const IntroductionArea: React.FC = () => {
-  const [width, setWidth] = useState(window.screen.width)
-  useEffect(() => {
-    const onResize = () => {
-      setWidth(window.screen.width)
-    }
-    window.addEventListener('resize', onResize)
-    return () => {
-      window.removeEventListener('resize', onResize)
-    }
-  }, [])
   return (
     <div className={classNames.root}>
       <Stack
