@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { News } from '~type/index'
-import { Stack, Text, mergeStyleSets, DefaultButton } from 'office-ui-fabric-react'
+import { Stack, Text, mergeStyleSets, mergeStyles, DefaultButton } from 'office-ui-fabric-react'
 import { Card } from '@uifabric/react-cards'
 
 export interface NewsAreaProps {
@@ -9,10 +9,22 @@ export interface NewsAreaProps {
 
 const classNames = mergeStyleSets({
   root: {
-    height: '1009px',
+    minHeight: '1009px',
     selectors: {
       '@media(max-width: 1024px)': {
         height: 'auto'
+      }
+    }
+  },
+  banner: {
+    background: 'no-repeat center center',
+    backgroundColor: 'black',
+    backgroundAttachment: 'scroll',
+    backgroundSize: 'cover',
+    backgroundImage: 'url(/assets/images/background/bg5.png)',
+    selectors: {
+      '@media(min-width: 1024px)': {
+        backgroundImage: 'url(/assets/images/background/bg5@2x.png)'
       }
     }
   },
@@ -91,7 +103,7 @@ const NewsArea: React.FC<NewsAreaProps> = ({ news }) => {
     }
   }, [])
   return (
-    <div className={classNames.root}>
+    <div className={mergeStyles(classNames.root, classNames.banner)}>
       <Stack tokens={{
         childrenGap: '5rem'
       }}>
@@ -129,7 +141,7 @@ const NewsArea: React.FC<NewsAreaProps> = ({ news }) => {
                       label: classNames.cardButtonLabel
                     }}
                   >
-                      Learn more
+                    Learn more
                   </DefaultButton>
                 </Card.Section>
               </Card>
