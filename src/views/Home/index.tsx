@@ -6,6 +6,7 @@ import { news1, news2, news3, news4 } from '~data/news'
 import { oneBlockPlus, polkabase, polkadot, rustcc } from '~data/partners'
 import { participant1, participant2, participant3, participant4, participant5 } from '~data/participants'
 import IntroductionArea from './IntroductionArea'
+import InnovationArea from './InnovationArea'
 import PartnersArea from './PartnersArea'
 import NewsArea from './NewsArea'
 import ParticipantsArea from './ParticipantsArea'
@@ -28,6 +29,7 @@ const HomePage: React.FC = () => {
         { name: 'Blog', url: '/contact' }
       ]}/>
       <IntroductionArea/>
+      <InnovationArea/>
       <ParticipantsArea participants={participants}/>
       <NewsArea news={news}/>
       <PartnersArea partners={partners}/>
