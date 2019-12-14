@@ -123,7 +123,7 @@ const NewsArea: React.FC<NewsAreaProps> = ({ news }) => {
             verticalAlign='center'
             horizontal={width > 1024}
           >
-            {news.map(({ title, description, to }) => (
+            {news.map(({ title, description }) => (
               <Card
                 className={classNames.card}
                 key={title}
