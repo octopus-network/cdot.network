@@ -1,10 +1,10 @@
 import { Partner } from '~type/index'
 
 export const polkadot: Partner = {
-  name: 'polkadot',
+  name: 'polkaworld',
   imgUrl: {
-    default: '/assets/images/partner/Polkadot.png',
-    large: '/assets/images/partner/Polkadot@2x.png'
+    default: '/assets/images/partner/polkaworld.png',
+    large: '/assets/images/partner/polkaworld@2x.png'
   },
   width: 216,
   height: 49
