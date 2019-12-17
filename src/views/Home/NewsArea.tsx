@@ -66,9 +66,6 @@ const classNames = mergeStyleSets({
       }
     }
   },
-  cardBody: {
-    padding: '2rem 1rem'
-  },
   cardTitle: {
     height: '103px',
     fontSize: '28px',
@@ -129,8 +126,10 @@ const NewsArea: React.FC<NewsAreaProps> = ({ news }) => {
                 key={title}
               >
                 <Card.Section
-                  tokens={{ childrenGap: width > 1024 ? '3rem' : 10 }}
-                  className={classNames.cardBody}
+                  tokens={{
+                    childrenGap: width > 1024 ? '3rem' : 10,
+                    padding: '2rem 1rem'
+                  }}
                 >
                   <Text className={classNames.cardTitle}>{title}</Text>
                   <Text className={mergeStyles('cdot-hover-description', classNames.cardDescription)}>{description}</Text>

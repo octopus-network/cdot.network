@@ -50,3 +50,8 @@ body {
     bottom: -0.05em
   }
 }
+
+.ms-Stack-inner {
+  // fix: X-overflow
+  width: 100%
+}
