@@ -6,8 +6,8 @@ export const polkadot: Partner = {
     default: '/assets/images/partner/polkaworld.png',
     large: '/assets/images/partner/polkaworld@2x.png'
   },
-  width: 216,
-  height: 49
+  width: 254,
+  height: 36
 }
 
 export const rustcc: Partner = {
