@@ -1,0 +1,38 @@
+@import "~office-ui-fabric-react/dist/sass/Fabric";
+@import "./variables";
+
+.cdot-text-gradual-change {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent
+}
+
+html,
+body {
+  /* stylelint-disable font-family-no-missing-generic-family-keyword */
+  font-family: Alata, Alata-Regular;
+  background-color: #000
+}
+
+.cdot-stack {
+  margin: auto 4rem;
+  padding-left: $stack-padding;
+  padding-right: $stack-padding;
+
+  @media (max-width: $ms-screen-max-lg) {
+    margin: auto 0
+  }
+}
+
+.cdot-title {
+  margin: auto 7rem;
+
+  @media (max-width: $ms-screen-max-lg) {
+    margin: auto 0
+  }
+}
+
+.ms-Stack-inner {
+  // fix: X-overflow
+  width: 100%
+}

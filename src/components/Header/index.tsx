@@ -85,13 +85,6 @@ const classNames = mergeStyleSets({
       }
     }
   },
-  textArea: {
-    selectors: {
-      '@media(max-width: 640px)': {
-        padding: '0 1rem'
-      }
-    }
-  },
   sayingText: {
     color: '#CACACA',
     fontWeight: 'lighter',
@@ -140,9 +133,8 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
       <CommandBar items={items}/>
       <div className={classNames.banner}>
         <Stack
-          styles={{ root: classNames.textArea }}
+          className={mergeStyles('cdot-stack', 'cdot-title')}
           tokens={{
-            padding: '0 7rem',
             childrenGap: '40px'
           }}
         >

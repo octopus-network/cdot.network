@@ -1,0 +1,33 @@
+.cdot-icon-relayers {
+  border: 8px solid transparent;
+  border-top-color: #a24146;
+  border-bottom-color: #a24146;
+  border-radius: 50%;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    background-color: #a24146
+  }
+
+  &::before {
+    transform: rotate(135deg);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    right: -0.3em;
+    top: -0.05em
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    left: -0.3em;
+    bottom: -0.05em
+  }
+}

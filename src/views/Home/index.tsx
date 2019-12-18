@@ -12,7 +12,7 @@ import NewsArea from './NewsArea'
 import ParticipantsArea from './ParticipantsArea'
 import FootBar from '~component/FootBar'
 
-import './index.scss'
+import '../../style/index.scss'
 
 const news: News[] = [news1, news2, news3, news4]
 const partners: Partner[] = [polkadot, rustcc, polkabase, oneBlockPlus]

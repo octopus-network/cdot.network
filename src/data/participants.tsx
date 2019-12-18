@@ -1,19 +1,8 @@
 import React from 'react'
 import ParticipantCircle from '~component/ParticipantCilcle'
-import { mergeStyleSets, Stack } from 'office-ui-fabric-react'
 import { Participant } from '~type/index'
 
-const classNames = mergeStyleSets({
-  root: {
-    height: '1275px'
-  },
-  title: {
-    fontSize: '56px'
-  },
-  ledgers: {
-    borderRadius: '4px'
-  }
-})
+import '~style/participants.scss'
 
 export const participant1: Participant = {
   title: 'Ledgers',
@@ -31,26 +20,26 @@ export const participant1: Participant = {
           gridTemplateRows: 'repeat(3, 15px)'
         }}>
           <div
-            className={classNames.ledgers}
             style={{
               backgroundColor: '#4AE7B3',
+              borderRadius: '4px',
               gridRow: '1',
               gridColumn: '1 / 3',
               width: '28px',
               height: '28px'
             }}/>
           <div
-            className={classNames.ledgers}
             style={{
               backgroundColor: '#35A985',
+              borderRadius: '4px',
               gridRow: '1',
               width: '14px',
               height: '28px'
             }}/>
           <div
-            className={classNames.ledgers}
             style={{
               backgroundColor: '#2D9071',
+              borderRadius: '4px',
               gridRow: '3',
               height: '12px',
               width: '45px'
