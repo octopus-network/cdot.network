@@ -61,15 +61,6 @@ const classNames = mergeStyleSets({
       }
     }
   },
-  narrowCommandBar: {
-    display: 'none',
-    backgroundColor: 'transparent',
-    selectors: {
-      '@media(max-width: 640px)': {
-        display: 'initial'
-      }
-    }
-  },
   commandBarItems: {
     marginRight: '5rem',
     fontSize: '24px'
@@ -114,7 +105,7 @@ const CommandBar: React.FC<Pick<HeaderProps, 'items'>> = ({ items }) => {
           </a>))}
       </div>
       <FabricCommandBar
-        className={classNames.narrowCommandBar}
+        className='ms-hiddenLgUp'
         styles={{
           root: {
             backgroundColor: 'transparent',
