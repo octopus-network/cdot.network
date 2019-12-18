@@ -6,7 +6,7 @@ import '~style/participants.scss'
 
 export const participant1: Participant = {
   title: 'Ledgers',
-  description: 'Ledgers deposit CDOT into reserve account  voluntarily is to provide deposit insurance for  incoming inter-ledger transactions.',
+  description: 'Ledgers of any type such as Appchains, decentralised blockchains and centralised platforms join the Cdot Network to acquire interoperability.',
   icon: () => {
     return (
       <ParticipantCircle
@@ -52,7 +52,7 @@ export const participant1: Participant = {
 
 export const participant2: Participant = {
   title: 'Validators',
-  description: 'Ledgers deposit CDOT into reserve account  voluntarily is to provide deposit insurance for  incoming inter-ledger transactions.',
+  description: 'A numerous of validator nodes compose the Cdot Hub. Validators secure the hub, by validating transactions and proposing, verifying, finalizing blocks, and get paid via block rewards and transaction fees.',
   icon: () => {
     return (
       <ParticipantCircle
@@ -111,7 +111,7 @@ export const participant2: Participant = {
 
 export const participant3: Participant = {
   title: 'Relayers',
-  description: 'Ledgers deposit CDOT into reserve account  voluntarily is to provide deposit insurance for  incoming inter-ledger transactions.',
+  description: 'Relayers are off chain processes usually deployed by ledgers. They are responsible for root-of-trust synchronization and transaction forwarding between ledgers and the hub.',
   icon: () => {
     return (
       <ParticipantCircle
@@ -151,7 +151,7 @@ export const participant3: Participant = {
 
 export const participant4: Participant = {
   title: 'Fishermen',
-  description: 'Ledgers deposit CDOT into reserve account  voluntarily is to provide deposit insurance for  incoming inter-ledger transactions.',
+  description: 'Fishermen are processes to earn rewards by submitting fraud proofs to hub and ledgers when Byzantine faults occurred. Their jobs make sure Byzantine faults could be detected in time to mitigate the potential loss.',
   icon: () => {
     return (
       <ParticipantCircle
@@ -209,7 +209,7 @@ export const participant4: Participant = {
 
 export const participant5: Participant = {
   title: 'Users',
-  description: 'Ledgers deposit CDOT into reserve account  voluntarily is to provide deposit insurance for  incoming inter-ledger transactions.',
+  description: 'Users pay CDOT as transaction fee to make inter-ledger transactions. CDOT stakeholders may share transaction fee revenues with validators by delegating their CDOT tokens, meanwhile, who still hold voting power to participate in the on-chain governance.',
   icon: () => {
     return (
       <ParticipantCircle
