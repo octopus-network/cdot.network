@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import {
   Text, Stack, PrimaryButton,
-  mergeStyleSets
+  mergeStyleSets, mergeStyles
 } from 'office-ui-fabric-react'
 import { introduction1, introduction2, introduction3 } from '~data/introductions'
 import IntroduceCard from '~component/IntroduceCard'
@@ -12,7 +12,9 @@ const classNames = mergeStyleSets({
   root: {
     width: '100%',
     height: '1000px',
-    padding: '20rem 0rem'
+    padding: '20rem 0rem',
+    marginLeft: 'auto',
+    marginRight: 'auto'
   },
   banner: {
     background: 'no-repeat center center',
@@ -71,7 +73,7 @@ const IntroductionArea: React.FC = () => {
   return (
     <div className={classNames.root}>
       <Stack
-        className={classNames.banner}
+        className={mergeStyles(classNames.banner, 'cdot-stack')}
         horizontal
         verticalAlign='center'
         horizontalAlign='space-between'

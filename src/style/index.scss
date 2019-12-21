@@ -15,9 +15,11 @@ body {
 }
 
 .cdot-stack {
-  margin: auto 4rem;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: $stack-padding;
   padding-right: $stack-padding;
+  max-width: 1654px;
 
   @media (max-width: $ms-screen-max-lg) {
     margin: auto 0
