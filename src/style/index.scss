@@ -27,7 +27,8 @@ body {
 }
 
 .cdot-title {
-  margin: auto 7rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 
   @media (max-width: $ms-screen-max-lg) {
     margin: auto 0
