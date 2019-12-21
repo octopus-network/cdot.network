@@ -39,3 +39,8 @@ body {
   // fix: X-overflow
   width: 100%
 }
+
+.ms-Grid-row {
+  // fix: display
+  margin: 0
+}
