@@ -63,41 +63,41 @@ export const participant2: Participant = {
         <div>
           <div style={{
             backgroundColor: '#F9D63F',
-            height: '20px',
-            width: '20px',
+            height: '18px',
+            width: '18px',
             borderRadius: '5px',
             transform: 'rotate(-45deg)'
           }}>
             <div style={{
               backgroundColor: '#F9D63F',
               position: 'absolute',
-              left: '-12px',
+              left: '-10px',
               height: '21px',
-              width: '10px',
-              borderRadius: '10px'
+              width: '8px',
+              borderRadius: '4px'
             }}/>
             <div style={{
               backgroundColor: '#F9D63F',
               position: 'absolute',
-              left: '22px',
+              left: '20px',
               height: '21px',
-              width: '10px',
-              borderRadius: '10px'
+              width: '8px',
+              borderRadius: '4px'
             }}/>
             <div style={{
               backgroundColor: '#F9D63F',
               position: 'absolute',
-              left: '6px',
+              left: '5px',
               width: '10px',
               height: '43px',
-              borderBottomLeftRadius: '10px',
-              borderBottomRightRadius: '10px'
+              borderBottomLeftRadius: '4px',
+              borderBottomRightRadius: '4px'
             }}/>
           </div>
           <div style={{
             backgroundColor: '#F9D63F',
             position: 'relative',
-            borderRadius: '10px',
+            borderRadius: '3px',
             height: '7px',
             width: '28px',
             left: '-10px',
