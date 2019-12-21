@@ -31,3 +31,40 @@
     bottom: -0.05em
   }
 }
+
+.cdot-icon-validators {
+  .hammer {
+    animation-name: cdot-icon-validators-hammer;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-duration: 700ms
+  }
+
+  & .line {
+    animation-name: cdot-icon-validators-line;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+    animation-duration: 700ms
+  }
+}
+
+@keyframes cdot-icon-validators-hammer {
+  from {
+    transform: rotate(0) translateX(0) translateY(0)
+  }
+
+  to {
+    top: 10px;
+    transform: rotate(-45deg) translateX(-5px) translateY(9px)
+  }
+}
+
+@keyframes cdot-icon-validators-line {
+  from {
+    width: 28px
+  }
+
+  to {
+    width: 6px
+  }
+}

@@ -60,49 +60,54 @@ export const participant2: Participant = {
           backgroundColor: '#342C21'
         }}
       >
-        <div>
-          <div style={{
-            backgroundColor: '#F9D63F',
-            height: '18px',
-            width: '18px',
-            borderRadius: '5px',
-            transform: 'rotate(-45deg)'
-          }}>
+        <div className='cdot-icon-validators'>
+          <div className='hammer'>
             <div style={{
               backgroundColor: '#F9D63F',
-              position: 'absolute',
-              left: '-10px',
-              height: '21px',
-              width: '8px',
-              borderRadius: '4px'
-            }}/>
-            <div style={{
-              backgroundColor: '#F9D63F',
-              position: 'absolute',
-              left: '20px',
-              height: '21px',
-              width: '8px',
-              borderRadius: '4px'
-            }}/>
-            <div style={{
-              backgroundColor: '#F9D63F',
-              position: 'absolute',
-              left: '5px',
-              width: '10px',
-              height: '43px',
-              borderBottomLeftRadius: '4px',
-              borderBottomRightRadius: '4px'
-            }}/>
+              height: '18px',
+              width: '18px',
+              borderRadius: '5px',
+              transform: 'rotate(-45deg)'
+            }}>
+              <div style={{
+                backgroundColor: '#F9D63F',
+                position: 'absolute',
+                left: '-10px',
+                height: '21px',
+                width: '8px',
+                borderRadius: '4px'
+              }}/>
+              <div style={{
+                backgroundColor: '#F9D63F',
+                position: 'absolute',
+                left: '20px',
+                height: '21px',
+                width: '8px',
+                borderRadius: '4px'
+              }}/>
+              <div style={{
+                backgroundColor: '#F9D63F',
+                position: 'absolute',
+                left: '5px',
+                width: '10px',
+                height: '43px',
+                borderBottomLeftRadius: '4px',
+                borderBottomRightRadius: '4px'
+              }}/>
+            </div>
           </div>
-          <div style={{
-            backgroundColor: '#F9D63F',
-            position: 'relative',
-            borderRadius: '3px',
-            height: '7px',
-            width: '28px',
-            left: '-10px',
-            bottom: '-18px'
-          }}/>
+          <div
+            className='line'
+            style={{
+              backgroundColor: '#F9D63F',
+              position: 'absolute',
+              borderRadius: '3px',
+              height: '7px',
+              width: '28px',
+              left: '30px',
+              bottom: '176px'
+            }}
+          />
         </div>
       </ParticipantCircle>
     )
