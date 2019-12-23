@@ -61,6 +61,18 @@ export const participant2: Participant = {
         }}
       >
         <div className='cdot-icon-validators'>
+          <div
+            className='line'
+            style={{
+              backgroundColor: '#F9D63F',
+              position: 'absolute',
+              borderRadius: '3px',
+              height: '7px',
+              width: '28px',
+              left: '-15px',
+              bottom: '-22px'
+            }}
+          />
           <div className='hammer'>
             <div style={{
               backgroundColor: '#F9D63F',
@@ -96,18 +108,6 @@ export const participant2: Participant = {
               }}/>
             </div>
           </div>
-          <div
-            className='line'
-            style={{
-              backgroundColor: '#F9D63F',
-              position: 'absolute',
-              borderRadius: '3px',
-              height: '7px',
-              width: '28px',
-              left: '30px',
-              bottom: '176px'
-            }}
-          />
         </div>
       </ParticipantCircle>
     )
