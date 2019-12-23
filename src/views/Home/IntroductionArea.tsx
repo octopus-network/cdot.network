@@ -121,7 +121,6 @@ const IntroductionArea: React.FC = () => {
           <Stack
             styles={{
               root: {
-                paddingRight: '10rem',
                 selectors: {
                   '@media(max-width: 1024px)': {
                     paddingRight: '0',
