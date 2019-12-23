@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '~component/Header'
-import { Fabric, mergeStyles } from 'office-ui-fabric-react'
+import { Fabric } from 'office-ui-fabric-react'
 import { News, Participant, Partner } from '~type/index'
 import { news1, news2, news3, news4 } from '~data/news'
 import { oneBlockPlus, polkabase, polkadot, rustcc } from '~data/partners'
@@ -20,9 +20,7 @@ const participants: Participant[] = [participant1, participant2, participant3, p
 
 const HomePage: React.FC = () => {
   return (
-    <Fabric className={mergeStyles({
-      backgroundColor: '#000'
-    })}>
+    <Fabric className='cdot-page'>
       <Header items={[
         { name: 'About', url: '/contact' },
         { name: 'Github', url: 'https://github.com/cdot-network' },

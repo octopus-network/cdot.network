@@ -3,8 +3,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { loadTheme } from 'office-ui-fabric-react/lib/Styling'
 import * as serviceWorker from './serviceWorker'
-import './index.less'
 import App from './App'
+
+import './index.less'
 
 loadTheme({
   defaultFontStyle: {
