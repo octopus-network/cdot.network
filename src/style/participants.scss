@@ -34,14 +34,14 @@
 
 .cdot-icon-validators {
   .hammer {
-    animation-name: cdot-icon-validators-hammer;
+    //animation-name: cdot-icon-validators-hammer;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
     animation-duration: 700ms
   }
 
   & .line {
-    animation-name: cdot-icon-validators-line;
+    //animation-name: cdot-icon-validators-line;
     animation-direction: alternate;
     animation-timing-function: ease-out;
     animation-duration: 700ms
