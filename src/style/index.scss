@@ -27,10 +27,14 @@ body {
 }
 
 .cdot-title {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-left: 130px;
 
-  @media (max-width: $ms-screen-max-lg) {
+  @media (min-width: $ms-screen-min-md) and (max-width: $ms-screen-max-lg) {
+    padding-left: 70px
+  }
+
+  @media (max-width: $ms-screen-max-md) {
+    padding-left: 0.75rem;
     margin: auto 0
   }
 }
