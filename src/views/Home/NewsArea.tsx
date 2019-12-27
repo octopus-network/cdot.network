@@ -38,10 +38,10 @@ const classNames = mergeStyleSets({
     }
   },
   card: {
-    width: '398px',
-    minWidth: '398px',
-    height: '424px',
-    minHeight: '424px',
+    width: '298px',
+    minWidth: '298px',
+    height: '318px',
+    minHeight: '318px',
     backgroundColor: '#000',
     selectors: {
       '@media(max-width: 1024px)': {
@@ -68,7 +68,7 @@ const classNames = mergeStyleSets({
   },
   cardTitle: {
     height: '103px',
-    fontSize: '28px',
+    fontSize: '21px',
     fontWeight: '400',
     selectors: {
       '@media(max-width: 1024px)': {
@@ -78,8 +78,8 @@ const classNames = mergeStyleSets({
   },
   cardDescription: {
     height: '89px',
-    color: '#666666',
-    fontSize: '20px',
+    color: '#666',
+    fontSize: '15px',
     fontWeight: '400',
     selectors: {
       '@media(max-width: 1024px)': {
@@ -127,8 +127,14 @@ const NewsArea: React.FC<NewsAreaProps> = ({ news }) => {
               >
                 <Card.Section
                   tokens={{
-                    childrenGap: width > 1024 ? '3rem' : 10,
-                    padding: '2rem 1rem'
+                    childrenGap: width > 1024 ? '3rem' : 10
+                  }}
+                  styles={{
+                    root: {
+                      paddingTop: '45px',
+                      paddingLeft: '20px',
+                      paddingRight: '20px'
+                    }
                   }}
                 >
                   <Text className={classNames.cardTitle}>{title}</Text>
