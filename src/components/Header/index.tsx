@@ -91,14 +91,14 @@ const classNames = mergeStyleSets({
   }
 })
 
-const CommandBar: React.FC<Pick<HeaderProps, 'items'>> = ({ items }) => {
+export const CommandBar: React.FC<Pick<HeaderProps, 'items'>> = ({ items }) => {
   return (
     <div className={classNames.commandBar}>
       <div className={classNames.commandBarTitle}>
         <span>cdot.network</span>
       </div>
       <div className={classNames.commandBarItems}>
-        {items.map((item, index) => (
+        {items.map((item) => (
           // todo: use Link on 'react-router-dom'
           <a className={classNames.commandBarItem} key={item.name} href={item.url || '#'}>
             {item.name}
@@ -118,10 +118,10 @@ const CommandBar: React.FC<Pick<HeaderProps, 'items'>> = ({ items }) => {
   )
 }
 
-const Header: React.FC<HeaderProps> = ({ items }) => {
+const Header: React.FC<HeaderProps> = (props) => {
   return (
     <div className={mergeStyles(classNames.nav)}>
-      <CommandBar items={items}/>
+      <CommandBar {...props}/>
       <div className={classNames.banner}>
         <Stack
           className={mergeStyles('cdot-stack', 'cdot-title')}
@@ -133,7 +133,7 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
             <Text
               className={classNames.companyText}
             >
-            cdot.
+              cdot.
             </Text>
           </Stack.Item>
           <Stack.Item>
@@ -141,7 +141,7 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
               variant='mega'
               className={classNames.sayingText}
             >
-        A secured hub to serve heterogeneous ledgers for asset transfer
+              A secured hub to serve heterogeneous ledgers for asset transfer
             </Text>
           </Stack.Item>
           <Stack.Item>
