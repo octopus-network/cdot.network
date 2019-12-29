@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { News } from '~type/index'
 import { Stack, Text, mergeStyleSets, mergeStyles, DefaultButton } from 'office-ui-fabric-react'
 import { Card } from '@uifabric/react-cards'
+import { Link } from 'react-router-dom'
 
 export interface NewsAreaProps {
   news: News[]
@@ -141,26 +142,28 @@ const NewsArea: React.FC<NewsAreaProps> = ({ news }) => {
                   <Text className={mergeStyles('cdot-hover-description', classNames.cardDescription)}>{description}</Text>
                 </Card.Section>
                 <Card.Section>
-                  <DefaultButton
-                    styles={{
-                      root: {
-                        backgroundColor: 'transparent',
-                        border: 'none',
-                        width: '150px'
-                      },
-                      rootHovered: {
-                        backgroundColor: 'transparent'
-                      },
-                      label: {
-                        width: '103px',
-                        fontSize: '20px',
-                        fontWeight: '400',
-                        color: '#fff'
-                      }
-                    }}
-                  >
+                  <Link to='/contact'>
+                    <DefaultButton
+                      styles={{
+                        root: {
+                          backgroundColor: 'transparent',
+                          border: 'none',
+                          width: '150px'
+                        },
+                        rootHovered: {
+                          backgroundColor: 'transparent'
+                        },
+                        label: {
+                          width: '103px',
+                          fontSize: '20px',
+                          fontWeight: '400',
+                          color: '#fff'
+                        }
+                      }}
+                    >
                     Learn more
-                  </DefaultButton>
+                    </DefaultButton>
+                  </Link>
                 </Card.Section>
               </Card>
             ))}

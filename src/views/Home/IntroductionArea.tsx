@@ -5,6 +5,7 @@ import {
 } from 'office-ui-fabric-react'
 import { introduction1, introduction2, introduction3 } from '~data/introductions'
 import IntroduceCard from '~component/IntroduceCard'
+import { Link } from 'react-router-dom'
 
 const introductions = [introduction1, introduction2, introduction3]
 
@@ -97,23 +98,25 @@ const IntroductionArea: React.FC = () => {
               </Text>
             </Stack.Item>
             <Stack.Item>
-              <PrimaryButton styles={{
-                root: {
-                  height: '53px',
-                  width: '183px',
-                  transition: 'ease-in-out 0.2s'
-                },
-                rootHovered: {
-                  backgroundColor: '#fff',
-                  transition: 'ease-in-out 0.2s'
-                },
-                label: {
-                  color: '#030303',
-                  fontWeight: '400'
-                }
-              }}>
+              <Link to='/contact'>
+                <PrimaryButton styles={{
+                  root: {
+                    height: '53px',
+                    width: '183px',
+                    transition: 'ease-in-out 0.2s'
+                  },
+                  rootHovered: {
+                    backgroundColor: '#fff',
+                    transition: 'ease-in-out 0.2s'
+                  },
+                  label: {
+                    color: '#030303',
+                    fontWeight: '400'
+                  }
+                }}>
                 Learn More
-              </PrimaryButton>
+                </PrimaryButton>
+              </Link>
             </Stack.Item>
           </Stack>
         </Stack.Item>

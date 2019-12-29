@@ -2,6 +2,7 @@ import React from 'react'
 import { Stack, mergeStyleSets, mergeStyles, PrimaryButton, Text } from 'office-ui-fabric-react'
 import { Card } from '@uifabric/react-cards'
 import { Participant } from '~type/index'
+import { Link } from 'react-router-dom'
 
 interface Props {
   participants: Participant[]
@@ -41,29 +42,31 @@ const ParticipantsArea: React.FC<Props> = ({ participants }) => {
           >
             <Stack.Item>
               <Text className={classNames.title}>
-            Participants
+                Participants
               </Text>
             </Stack.Item>
             <Stack.Item>
-              <PrimaryButton
-                styles={{
-                  root: {
-                    height: '53px',
-                    width: '183px',
-                    transition: 'ease-in-out 0.2s'
-                  },
-                  rootHovered: {
-                    backgroundColor: '#fff',
-                    transition: 'ease-in-out 0.2s'
-                  },
-                  label: {
-                    color: '#030303',
-                    fontWeight: '400'
-                  }
-                }}
-              >
-                Learn More
-              </PrimaryButton>
+              <Link to='/contact'>
+                <PrimaryButton
+                  styles={{
+                    root: {
+                      height: '53px',
+                      width: '183px',
+                      transition: 'ease-in-out 0.2s'
+                    },
+                    rootHovered: {
+                      backgroundColor: '#fff',
+                      transition: 'ease-in-out 0.2s'
+                    },
+                    label: {
+                      color: '#030303',
+                      fontWeight: '400'
+                    }
+                  }}
+                >
+                  Learn More
+                </PrimaryButton>
+              </Link>
             </Stack.Item>
           </Stack>
         </Stack.Item>

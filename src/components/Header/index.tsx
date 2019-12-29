@@ -3,6 +3,7 @@ import {
   mergeStyleSets, mergeStyles, Stack, Text, PrimaryButton,
   CommandBar as FabricCommandBar
 } from 'office-ui-fabric-react'
+import { Link } from 'react-router-dom'
 
 export interface HeaderProps {
   items: {
@@ -41,6 +42,7 @@ const classNames = mergeStyleSets({
     position: 'absolute',
     top: 0,
     left: 0,
+    zIndex: 1000,
     width: '100%',
     height: '64px',
     display: 'flex',
@@ -48,8 +50,7 @@ const classNames = mergeStyleSets({
     justifyContent: 'space-between',
     alignItems: 'center',
     background: 'transparent',
-    color: 'white',
-    backgroundColor: '#000'
+    color: 'white'
   },
   commandBarTitle: {
     marginLeft: '5rem',
@@ -95,7 +96,9 @@ export const CommandBar: React.FC<Pick<HeaderProps, 'items'>> = ({ items }) => {
   return (
     <div className={classNames.commandBar}>
       <div className={classNames.commandBarTitle}>
-        <span>cdot.network</span>
+        <Link to='/'>
+          <span>cdot.network</span>
+        </Link>
       </div>
       <div className={classNames.commandBarItems}>
         {items.map((item) => (
@@ -145,23 +148,27 @@ const Header: React.FC<HeaderProps> = (props) => {
             </Text>
           </Stack.Item>
           <Stack.Item>
-            <PrimaryButton styles={{
-              root: {
-                height: '53px',
-                width: '183px',
-                transition: 'ease-in-out 0.2s'
-              },
-              rootHovered: {
-                backgroundColor: '#fff',
-                transition: 'ease-in-out 0.2s'
-              },
-              label: {
-                color: '#030303',
-                fontWeight: '400'
-              }
-            }}>
-              Get started
-            </PrimaryButton>
+            <Link to='/contact'>
+              <PrimaryButton
+                styles={{
+                  root: {
+                    height: '53px',
+                    width: '183px',
+                    transition: 'ease-in-out 0.2s'
+                  },
+                  rootHovered: {
+                    backgroundColor: '#fff',
+                    transition: 'ease-in-out 0.2s'
+                  },
+                  label: {
+                    color: '#030303',
+                    fontWeight: '400'
+                  }
+                }}
+              >
+                Get started
+              </PrimaryButton>
+            </Link>
           </Stack.Item>
         </Stack>
       </div>

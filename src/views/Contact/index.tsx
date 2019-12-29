@@ -9,6 +9,7 @@ const classNames = mergeStyleSets({
   banner: {
     height: '100%',
     width: '100%',
+    zIndex: 0,
     position: 'fixed',
     left: '0',
     top: '0',
@@ -63,7 +64,10 @@ const ContactPage: React.FC = () => {
         horizontalAlign='center'
       >
         <Stack.Item>
-          <Image src={width > 640 ? '/assets/images/title/comingsoon.png' : '/assets/title/comingsoon@2x.png'}/>
+          <Image
+            style={{ zIndex: 100 }}
+            src={width > 640 ? '/assets/images/title/comingsoon.png' : '/assets/title/comingsoon@2x.png'}
+          />
         </Stack.Item>
         <Stack.Item styles={{ root: { marginTop: '56px' } }}>
           <Text className={mergeStyles(classNames.font, classNames.contactFont)}>contact with the team</Text>
