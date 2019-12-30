@@ -18,9 +18,11 @@ export interface Introduction {
 export interface Partner {
   name: string
   imgUrl: {
+    type: 'image'
     default: string
     large: string
   } | {
+    type: 'svg'
     svg: string
   }
   width: number

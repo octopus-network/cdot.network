@@ -65,7 +65,7 @@ const PartnersArea: React.FC<NewsAreaProps> = ({ partners }) => {
                     <Image
                       width={width}
                       height={height}
-                      src={imgUrl.svg ? imgUrl.svg : (screenWidth > 640 ? imgUrl.large : imgUrl.default)}
+                      src={imgUrl.type === 'svg' ? imgUrl.svg : (screenWidth > 640 ? imgUrl.large : imgUrl.default)}
                     />
                   </Card.Section>
                 </Card>
