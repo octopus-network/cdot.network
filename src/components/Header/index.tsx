@@ -97,7 +97,7 @@ export const CommandBar: React.FC<Pick<HeaderProps, 'items'>> = ({ items }) => {
     <div className={classNames.commandBar}>
       <div className={classNames.commandBarTitle}>
         <Link to='/'>
-          <Image width={132} height={16} src='/assets/images/title/cdot.network.png'/>
+          <Image width={132} height={16} src='/assets/images/title/cdot.network.svg'/>
         </Link>
       </div>
       <div className={classNames.commandBarItems}>
@@ -133,7 +133,7 @@ const Header: React.FC<HeaderProps> = (props) => {
           }}
         >
           <Stack.Item>
-            <Image width={166} height={54} src='/assets/images/title/cdot@2x.png'/>
+            <Image width={166} height={54} src='/assets/images/title/cdot.svg'/>
           </Stack.Item>
           <Stack.Item>
             <Text

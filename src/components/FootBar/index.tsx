@@ -74,7 +74,7 @@ const FootBar: React.FC = () => {
           verticalAlign='center'
         >
           <Stack.Item>
-            <Image width={109} height={38} src='/assets/images/logo.png'/>
+            <Image width={109} height={38} src='/assets/images/title/cdot-gray.svg'/>
           </Stack.Item>
           <Stack.Item>
             <Separator styles={{
