@@ -3,8 +3,7 @@ import { Partner } from '~type/index'
 export const polkadot: Partner = {
   name: 'polkaworld',
   imgUrl: {
-    default: '/assets/images/partner/polkaworld.png',
-    large: '/assets/images/partner/polkaworld@2x.png'
+    svg: '/assets/images/partner/polka_world.svg'
   },
   width: 254,
   height: 36
@@ -23,8 +22,7 @@ export const rustcc: Partner = {
 export const polkabase: Partner = {
   name: 'polkbase.',
   imgUrl: {
-    default: '/assets/images/partner/polkabase.png',
-    large: '/assets/images/partner/polkabase@2x.png'
+    svg: '/assets/images/partner/polkabase.svg'
   },
   width: 270,
   height: 50
@@ -33,8 +31,7 @@ export const polkabase: Partner = {
 export const oneBlockPlus: Partner = {
   name: 'one block+',
   imgUrl: {
-    default: '/assets/images/partner/one_block+.png',
-    large: '/assets/images/partner/one_block+@2x.png'
+    svg: '/assets/images/partner/one_block+.svg'
   },
   width: 169,
   height: 58

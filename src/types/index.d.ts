@@ -20,6 +20,8 @@ export interface Partner {
   imgUrl: {
     default: string
     large: string
+  } | {
+    svg: string
   }
   width: number
   height: number
