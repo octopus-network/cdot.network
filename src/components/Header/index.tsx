@@ -1,7 +1,7 @@
 import React from 'react'
 import {
   mergeStyleSets, mergeStyles, Stack, Text, PrimaryButton,
-  CommandBar as FabricCommandBar
+  CommandBar as FabricCommandBar, Image
 } from 'office-ui-fabric-react'
 import { Link } from 'react-router-dom'
 
@@ -97,7 +97,7 @@ export const CommandBar: React.FC<Pick<HeaderProps, 'items'>> = ({ items }) => {
     <div className={classNames.commandBar}>
       <div className={classNames.commandBarTitle}>
         <Link to='/'>
-          <span>cdot.network</span>
+          <Image width={132} height={16} src='/assets/images/title/cdot.network.png'/>
         </Link>
       </div>
       <div className={classNames.commandBarItems}>
@@ -133,11 +133,7 @@ const Header: React.FC<HeaderProps> = (props) => {
           }}
         >
           <Stack.Item>
-            <Text
-              className={classNames.companyText}
-            >
-              cdot.
-            </Text>
+            <Image width={166} height={54} src='/assets/images/title/cdot@2x.png'/>
           </Stack.Item>
           <Stack.Item>
             <Text
