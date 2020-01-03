@@ -5,9 +5,6 @@ const { DefinePlugin } = require('webpack')
 const HappyPack = require('happypack')
 const { config: baseWebpackConfig, happyThreadPool } = require('./webpack.base.config')
 
-const isProd = process.env.NODE_ENV === 'production'
-const extractCSS = isProd || process.env.TARGET === 'development'
-
 module.exports = merge(baseWebpackConfig, {
   devtool: 'source-map',
   entry: [
