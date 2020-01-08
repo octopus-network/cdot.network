@@ -70,6 +70,7 @@ const classNames = mergeStyleSets({
     color: '#DEDEDE',
     textDecoration: 'none',
     fontWeight: '400',
+    fontSize: '1rem',
     paddingLeft: '5rem',
     selectors: {
       '@media(max-width: 640px)': {
@@ -80,15 +81,12 @@ const classNames = mergeStyleSets({
   sayingText: {
     color: '#CACACA',
     fontWeight: 'lighter',
+    fontSize: '4.75rem',
     selectors: {
       '@media(max-width: 640px)': {
-        fontSize: '40px'
+        fontSize: '4rem'
       }
     }
-  },
-  companyText: {
-    fontSize: '90px',
-    fontWeight: '900'
   }
 })
 
@@ -137,7 +135,6 @@ const Header: React.FC<HeaderProps> = (props) => {
           </Stack.Item>
           <Stack.Item>
             <Text
-              variant='mega'
               className={classNames.sayingText}
             >
               A secured hub to serve heterogeneous ledgers for asset transfer
@@ -158,7 +155,8 @@ const Header: React.FC<HeaderProps> = (props) => {
                   },
                   label: {
                     color: '#030303',
-                    fontWeight: '400'
+                    fontWeight: '400',
+                    fontSize: '1rem'
                   }
                 }}
               >
