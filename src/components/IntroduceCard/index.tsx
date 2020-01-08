@@ -9,15 +9,9 @@ export interface IntroduceCardProps extends Introduction {
 
 const classNames = mergeStyleSets({
   root: {
-    width: '650px',
-    minWidth: '650px',
-    height: '174px',
-    selectors: {
-      '@media(max-width: 1024px)': {
-        minWidth: '100%',
-        width: '100%'
-      }
-    }
+    minWidth: '100%',
+    width: '100%',
+    height: '130px'
   },
   iconArea: {
     padding: '1rem',

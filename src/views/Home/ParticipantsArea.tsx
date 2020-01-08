@@ -12,12 +12,22 @@ const classNames = mergeStyleSets({
   root: {
     minHeight: '1275px'
   },
+  informationBlock: {
+    maxWidth: '682px'
+  },
   title: {
-    fontSize: '56px'
+    fontSize: '3.16rem'
+  },
+  introduction: {
+    fontSize: '1.5rem',
+    color: '#B3B3B3'
   },
   card: {},
-  cardTitle: {},
+  cardTitle: {
+    fontSize: '2.33rem'
+  },
   cardDescription: {
+    fontSize: '1.33rem',
     background: 'linear-gradient(#BCBCBC, #525052)'
   }
 })
@@ -34,6 +44,7 @@ const ParticipantsArea: React.FC<Props> = ({ participants }) => {
       >
         <Stack.Item>
           <Stack
+            className={classNames.informationBlock}
             tokens={{
               childrenGap: 50
             }}
@@ -43,6 +54,13 @@ const ParticipantsArea: React.FC<Props> = ({ participants }) => {
             <Stack.Item>
               <Text className={classNames.title}>
                 Participants
+              </Text>
+            </Stack.Item>
+            <Stack.Item>
+              <Text className={classNames.introduction}>
+                Cdot is an open network composed of several types of participants.
+                All participants take action in a strategythat maximizes their own interests,
+                but together they present a decentralized circulation network for crypto assets.
               </Text>
             </Stack.Item>
             <Stack.Item>

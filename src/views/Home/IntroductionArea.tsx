@@ -32,39 +32,30 @@ const classNames = mergeStyleSets({
       }
     }
   },
-  textArea: {
-    paddingLeft: '4rem',
-    width: '400px',
-    selectors: {
-      '@media(max-width: 1024px)': {
-        margin: 0,
-        padding: '0 1rem',
-        width: 'calc(100% - 1rem)'
-      },
-      '@media(min-width: 1024px)': {
-        width: '500px'
-      },
-      '@media(min-width: 1366px)': {
-        width: '700px'
-      }
-    }
-  },
   introductionTitle: {
-    fontSize: '50px',
+    fontSize: '3.16rem',
     fontWeight: '400',
     selectors: {
       '@media(max-width: 1024px)': {
-        fontSize: '35px'
+        fontSize: '3rem'
+      }
+    }
+  },
+  introductionTextBlock: {
+    width: '421px',
+    selectors: {
+      '@media(max-width: 1024px)': {
+        width: 'auto'
       }
     }
   },
   introductionText: {
-    fontSize: '24px',
+    fontSize: '1.67rem',
     color: '#B3B3B3',
     fontWeight: '400',
     selectors: {
       '@media(max-width: 1024px)': {
-        fontSize: '20px'
+        fontSize: '1.5rem'
       }
     }
   }
@@ -74,26 +65,27 @@ const IntroductionArea: React.FC = () => {
   return (
     <div className={classNames.root}>
       <Stack
-        className={mergeStyles(classNames.banner, 'cdot-stack')}
+        className={mergeStyles(classNames.banner, 'cdot-stack', 'cdot-introduction')}
         horizontal
         verticalAlign='center'
         horizontalAlign='space-between'
       >
         <Stack.Item>
           <Stack
-            className={classNames.textArea}
+            wrap={true}
             tokens={{
               childrenGap: '1rem'
             }}
           >
             <Stack.Item>
               <Text className={classNames.introductionTitle}>
-                A Closer Look at Cdot Network
+                A closer look at cdot
               </Text>
             </Stack.Item>
-            <Stack.Item>
+            <Stack.Item className={classNames.introductionTextBlock}>
               <Text className={classNames.introductionText}>
-                Cdot addresses key barriers facing blockchain innovation:Trustless Interoperation, Secure Transaction,
+                Cdot addresses key barriers facing blockchain
+                innovation: Trustless Interoperation, Secure Transaction,
                 Sustainable Mechanism.
               </Text>
             </Stack.Item>
@@ -124,8 +116,10 @@ const IntroductionArea: React.FC = () => {
           <Stack
             styles={{
               root: {
+                width: 552,
                 selectors: {
                   '@media(max-width: 1024px)': {
+                    width: '100%',
                     paddingRight: '0',
                     paddingTop: '1rem'
                   }

@@ -41,6 +41,15 @@ body {
   }
 }
 
+.cdot-introduction {
+  margin-left: 99px;
+  margin-right: 190px;
+
+  @media (max-width: $ms-screen-max-lg) {
+    margin: auto 0
+  }
+}
+
 .ms-Stack-inner {
   // fix: X-overflow
   width: 100%
