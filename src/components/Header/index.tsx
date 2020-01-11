@@ -84,7 +84,7 @@ const classNames = mergeStyleSets({
     fontSize: '4.75rem',
     selectors: {
       '@media(max-width: 640px)': {
-        fontSize: '4rem'
+        fontSize: '3.5rem'
       }
     }
   }
