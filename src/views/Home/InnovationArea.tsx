@@ -1,5 +1,5 @@
 import React from 'react'
-import { mergeStyleSets, mergeStyles, Stack, Text } from 'office-ui-fabric-react'
+import { mergeStyleSets, Stack, Text } from 'office-ui-fabric-react'
 
 const classNames = mergeStyleSets({
   root: {

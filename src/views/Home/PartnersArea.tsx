@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Stack, Image, Text, mergeStyleSets } from 'office-ui-fabric-react'
 import { Card } from '@uifabric/react-cards'
-import { Link } from 'react-router-dom'
 import { Partner } from '~type/index'
 
 export interface NewsAreaProps {
