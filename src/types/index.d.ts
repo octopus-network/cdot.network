@@ -17,6 +17,7 @@ export interface Introduction {
 
 export interface Partner {
   name: string
+  to: string
   imgUrl: {
     type: 'image'
     default: string

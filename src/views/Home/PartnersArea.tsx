@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Stack, Image, Text, mergeStyleSets } from 'office-ui-fabric-react'
 import { Card } from '@uifabric/react-cards'
+import { Link } from 'react-router-dom'
 import { Partner } from '~type/index'
 
 export interface NewsAreaProps {
@@ -56,17 +57,20 @@ const PartnersArea: React.FC<NewsAreaProps> = ({ partners }) => {
         </Stack.Item>
         <Stack.Item styles={{ root: { width: '100%' } }} align='center'>
           <Stack wrap tokens={{ childrenGap: 20 }} horizontal horizontalAlign='center'>
-            {partners.map(({ name, imgUrl, width, height }) => (
+            {partners.map(({ name, imgUrl, width, height, to }) => (
               <Stack.Item key={name}>
                 <Card
                   className={classNames.card}
                 >
                   <Card.Section>
-                    <Image
-                      width={width}
-                      height={height}
-                      src={imgUrl.type === 'svg' ? imgUrl.svg : (screenWidth > 640 ? imgUrl.large : imgUrl.default)}
-                    />
+                    {/* tip: external link */}
+                    <a target='_blank' rel='noopener noreferrer' href={to}>
+                      <Image
+                        width={width}
+                        height={height}
+                        src={imgUrl.type === 'svg' ? imgUrl.svg : (screenWidth > 640 ? imgUrl.large : imgUrl.default)}
+                      />
+                    </a>
                   </Card.Section>
                 </Card>
               </Stack.Item>

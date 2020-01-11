@@ -2,6 +2,7 @@ import { Partner } from '~type/index'
 
 export const polkadot: Partner = {
   name: 'polkaworld',
+  to: 'https://www.polkaworld.org',
   imgUrl: {
     type: 'svg',
     svg: '/assets/images/partner/polka_world.svg'
@@ -12,6 +13,7 @@ export const polkadot: Partner = {
 
 export const rustcc: Partner = {
   name: 'rust.cc',
+  to: 'https://rust.cc',
   imgUrl: {
     type: 'image',
     default: '/assets/images/partner/rust.cc.png',
@@ -23,6 +25,7 @@ export const rustcc: Partner = {
 
 export const polkabase: Partner = {
   name: 'polkbase.',
+  to: 'https://www.polkabase.com',
   imgUrl: {
     type: 'svg',
     svg: '/assets/images/partner/polkabase.svg'
@@ -33,6 +36,7 @@ export const polkabase: Partner = {
 
 export const oneBlockPlus: Partner = {
   name: 'one block+',
+  to: '/contact',
   imgUrl: {
     type: 'svg',
     svg: '/assets/images/partner/one_block+.svg'

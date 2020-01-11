@@ -161,7 +161,7 @@ const NewsArea: React.FC<NewsAreaProps> = ({ news }) => {
                         }
                       }}
                     >
-                    Learn more
+                      Learn more
                     </DefaultButton>
                   </Link>
                 </Card.Section>
