@@ -9,9 +9,14 @@ const classNames = mergeStyleSets({
   root: {
     minHeight: '1009px'
   },
+  mask: {
+    width: '100%',
+    height: '657px',
+    background: 'linear-gradient(90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%)'
+  },
   banner: {
-    display: 'flex',
-    justifyContent: 'center',
+    position: 'absolute',
+    zIndex: -1,
     height: '657px',
     width: '100%',
     background: 'no-repeat center center',
@@ -33,13 +38,15 @@ const classNames = mergeStyleSets({
   },
   introduction: {
     maxWidth: '537px',
-    fontSize: '20px',
+    fontSize: '1.66rem',
     marginTop: '-17px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
     color: '#BCBCBC',
     selectors: {
       '@media(max-width: 1024px)': {
         padding: '0 1rem',
-        fontSize: '20px'
+        fontSize: '1.4rem'
       }
     }
   }
@@ -55,7 +62,8 @@ const InnovationArea: React.FC<InnovationAreaProps> = ({ className }) => {
         <Stack.Item>
           <Text block className={classNames.title}>A Rendezvous for Web3 Innovation</Text>
         </Stack.Item>
-        <Stack.Item className={classNames.banner}>
+        <Stack.Item className={classNames.mask}>
+          <div className={classNames.banner}/>
           <Text block className={classNames.introduction}>
             Cdot is aiming to be a core component infrastructure for Web3 that empowers next generation of blockchain
             innovation
