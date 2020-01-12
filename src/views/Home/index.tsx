@@ -29,7 +29,7 @@ const HomePage: React.FC = () => {
           { name: 'Stay in Touch', url: '/contact' }
         ]}
       />
-      <IntroductionArea/>
+      <IntroductionArea className='cdot-introduction'/>
       <InnovationArea/>
       <ParticipantsArea participants={participants}/>
       <NewsArea news={news}/>

@@ -20,6 +20,25 @@ const classNames = mergeStyleSets({
         padding: '0.6rem'
       }
     }
+  },
+  title: {
+    fontSize: '1.75rem',
+    fontWeight: '400',
+    color: '#fff',
+    selectors: {
+      '@media(max-width: 1024px)': {
+        fontSize: '1.5rem'
+      }
+    }
+  },
+  introduction: {
+    fontSize: '1.25rem',
+    color: '#BCBCBC',
+    selectors: {
+      '@media(max-width: 1024px)': {
+        fontSize: '1rem'
+      }
+    }
   }
 })
 
@@ -49,35 +68,18 @@ const IntroduceCard: React.FC<IntroduceCardProps> = ({ title, description, imgUr
       <Card.Item>
         <Image
           className={classNames.iconArea}
-          width={width > 1024 ? 86 : 64}
-          height={width > 1024 ? 86 : 64}
+          height={65}
+          width={65}
           src={width > 640 ? imgUrl.large : imgUrl.default}
         />
       </Card.Item>
       <Card.Section>
-        <Text styles={{
-          root: {
-            fontSize: '28px',
-            fontWeight: '400',
-            color: '#fff',
-            selectors: {
-              '@media(max-width: 1024px)': {
-                fontSize: '18px'
-              }
-            }
-          }
-        }}>{title}</Text>
-        <Text styles={{
-          root: {
-            fontSize: '20px',
-            color: '#BCBCBC',
-            selectors: {
-              '@media(max-width: 1024px)': {
-                fontSize: '15px'
-              }
-            }
-          }
-        }} block>{description}</Text>
+        <Text className={classNames.introduction}>
+          {title}
+        </Text>
+        <Text className={classNames.introduction} block>
+          {description}
+        </Text>
       </Card.Section>
     </Card>
   )

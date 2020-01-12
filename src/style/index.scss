@@ -42,12 +42,17 @@ body {
 }
 
 .cdot-introduction {
-  margin-left: 99px;
-  margin-right: 190px;
+  height: 756.75px;
 
-  @media (max-width: $ms-screen-max-lg) {
-    margin: auto 0
+  .cdot-introduction-stack {
+    margin-left: 99px;
+    margin-right: 190px;
+
+    @media (max-width: $ms-screen-max-lg) {
+      margin: auto 0
+    }
   }
+
 }
 
 .cdot-header {

@@ -9,11 +9,14 @@ import { Link } from 'react-router-dom'
 
 const introductions = [introduction1, introduction2, introduction3]
 
+export interface IntroductionAreaProps {
+  className?: string
+}
+
 const classNames = mergeStyleSets({
   root: {
     width: '100%',
-    height: '1000px',
-    padding: '20rem 0rem',
+    padding: '165px 0rem',
     marginLeft: 'auto',
     marginRight: 'auto'
   },
@@ -61,12 +64,13 @@ const classNames = mergeStyleSets({
   }
 })
 
-const IntroductionArea: React.FC = () => {
+const IntroductionArea: React.FC<IntroductionAreaProps> = ({ className }) => {
   return (
-    <div className={classNames.root}>
+    <div className={mergeStyles(classNames.root, className)}>
       <Stack
-        className={mergeStyles(classNames.banner, 'cdot-stack', 'cdot-introduction')}
+        className={mergeStyles(classNames.banner, 'cdot-stack', 'cdot-introduction-stack')}
         horizontal
+        wrap={true}
         verticalAlign='center'
         horizontalAlign='space-between'
       >
