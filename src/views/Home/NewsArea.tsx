@@ -10,7 +10,7 @@ export interface NewsAreaProps {
 
 const classNames = mergeStyleSets({
   root: {
-    minHeight: '1009px',
+    minHeight: '700px',
     selectors: {
       '@media(max-width: 1024px)': {
         height: 'auto'

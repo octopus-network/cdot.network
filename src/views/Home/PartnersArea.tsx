@@ -10,7 +10,7 @@ export interface NewsAreaProps {
 const classNames = mergeStyleSets({
   root: {
     width: '100%',
-    height: '1009px'
+    height: '526px'
   },
   partners: {
     fontSize: '3.5rem'
