@@ -21,11 +21,14 @@ const participants: Participant[] = [participant1, participant2, participant3, p
 const HomePage: React.FC = () => {
   return (
     <Fabric className='cdot-page'>
-      <Header items={[
-        { name: 'About', url: '/contact' },
-        { name: 'Github', url: 'https://github.com/cdot-network' },
-        { name: 'Blog', url: '/contact' }
-      ]}/>
+      <Header
+        className='cdot-header'
+        items={[
+          { name: 'About', url: '/contact' },
+          { name: 'Github', url: 'https://github.com/cdot-network' },
+          { name: 'Stay in Touch', url: '/contact' }
+        ]}
+      />
       <IntroductionArea/>
       <InnovationArea/>
       <ParticipantsArea participants={participants}/>

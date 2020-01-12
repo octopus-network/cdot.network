@@ -6,6 +6,7 @@ import {
 import { Link } from 'react-router-dom'
 
 export interface HeaderProps {
+  className?: string
   items: {
     name: string
     url?: string
@@ -15,15 +16,14 @@ export interface HeaderProps {
 const classNames = mergeStyleSets({
   nav: {
     display: 'flex',
-    height: '867px',
     flexDirection: 'column',
     alignItems: 'center',
     alignContent: 'center',
     justifyContent: 'center'
   },
   banner: {
-    marginTop: '64px',
-    paddingTop: '9rem',
+    marginTop: '50px',
+    paddingTop: '169px',
     paddingBottom: '5rem',
     height: '100%',
     width: '100%',
@@ -44,7 +44,7 @@ const classNames = mergeStyleSets({
     left: 0,
     zIndex: 1000,
     width: '100%',
-    height: '64px',
+    height: '50px',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -63,18 +63,29 @@ const classNames = mergeStyleSets({
     }
   },
   commandBarItems: {
-    marginRight: '5rem',
+    display: 'flex',
+    alignItems: 'stretch',
+    height: '50px',
+    marginRight: '8.5rem',
     fontSize: '24px'
   },
   commandBarItem: {
     color: '#DEDEDE',
     textDecoration: 'none',
+    textAlign: 'center',
+    lineHeight: '50px',
     fontWeight: '400',
     fontSize: '1rem',
     paddingLeft: '5rem',
     selectors: {
       '@media(max-width: 640px)': {
         display: 'none'
+      },
+      ':hover': {
+        textDecoration: 'underline'
+      },
+      '::before': {
+
       }
     }
   },
@@ -119,9 +130,9 @@ export const CommandBar: React.FC<Pick<HeaderProps, 'items'>> = ({ items }) => {
   )
 }
 
-const Header: React.FC<HeaderProps> = (props) => {
+const Header: React.FC<HeaderProps> = ({ className = '', ...props }) => {
   return (
-    <div className={mergeStyles(classNames.nav)}>
+    <div className={mergeStyles(classNames.nav, className)}>
       <CommandBar {...props}/>
       <div className={classNames.banner}>
         <Stack
