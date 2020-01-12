@@ -2,9 +2,11 @@ import React from 'react'
 import Header from '~component/Header'
 import { Fabric } from 'office-ui-fabric-react'
 import { News, Participant, Partner } from '~type/index'
-import { news1, news2, news3, news4 } from '~data/news'
-import { oneBlockPlus, polkabase, polkadot, rustcc } from '~data/partners'
-import { participant1, participant2, participant3, participant4, participant5 } from '~data/participants'
+import {
+  news1, news2, news3, news4,
+  oneBlockPlus, polkabase, polkadot, rustcc,
+  participant1, participant2, participant3, participant4, participant5
+} from '~data'
 import IntroductionArea from './IntroductionArea'
 import InnovationArea from './InnovationArea'
 import PartnersArea from './PartnersArea'
