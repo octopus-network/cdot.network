@@ -12,7 +12,7 @@ import NewsArea from './NewsArea'
 import ParticipantsArea from './ParticipantsArea'
 import FootBar from '~component/FootBar'
 
-import '../../style/index.scss'
+import '~style/index.scss'
 
 const news: News[] = [news1, news2, news3, news4]
 const partners: Partner[] = [polkadot, rustcc, polkabase, oneBlockPlus]
@@ -30,7 +30,7 @@ const HomePage: React.FC = () => {
         ]}
       />
       <IntroductionArea className='cdot-introduction'/>
-      <InnovationArea/>
+      <InnovationArea className='cdot-innovation'/>
       <ParticipantsArea participants={participants}/>
       <NewsArea news={news}/>
       <PartnersArea partners={partners}/>

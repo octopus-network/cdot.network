@@ -1,5 +1,9 @@
 import React from 'react'
-import { mergeStyleSets, Stack, Text } from 'office-ui-fabric-react'
+import { mergeStyleSets, mergeStyles, Stack, Text } from 'office-ui-fabric-react'
+
+export interface InnovationAreaProps {
+  className?: string
+}
 
 const classNames = mergeStyleSets({
   root: {
@@ -14,16 +18,11 @@ const classNames = mergeStyleSets({
     backgroundColor: 'black',
     backgroundAttachment: 'scroll',
     backgroundSize: 'cover',
-    backgroundImage: 'url(/assets/images/background/bg4.png)',
-    selectors: {
-      '@media(min-width: 1024px)': {
-        backgroundImage: 'url(/assets/images/background/bg4@2x.png)'
-      }
-    }
+    backgroundImage: 'url(/assets/images/background/bg4.svg)'
   },
   title: {
-    fontSize: '50px',
-    marginBottom: '2rem',
+    fontSize: '3.16rem',
+    marginBottom: '30px',
     selectors: {
       '@media(max-width: 1024px)': {
         marginBottom: '1rem',
@@ -33,8 +32,9 @@ const classNames = mergeStyleSets({
     }
   },
   introduction: {
-    maxWidth: '716px',
-    fontSize: '26px',
+    maxWidth: '537px',
+    fontSize: '20px',
+    marginTop: '-17px',
     color: '#BCBCBC',
     selectors: {
       '@media(max-width: 1024px)': {
@@ -45,9 +45,9 @@ const classNames = mergeStyleSets({
   }
 })
 
-const InnovationArea = () => {
+const InnovationArea: React.FC<InnovationAreaProps> = ({ className }) => {
   return (
-    <div className={classNames.root}>
+    <div className={mergeStyles(classNames.root, className)}>
       <Stack
         horizontalAlign='center'
         verticalAlign='center'
