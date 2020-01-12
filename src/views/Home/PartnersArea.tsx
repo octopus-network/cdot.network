@@ -13,12 +13,12 @@ const classNames = mergeStyleSets({
     height: '1009px'
   },
   partners: {
-    fontSize: '56px'
+    fontSize: '3.5rem'
   },
   card: {
-    width: '322px',
-    minWidth: '322px',
-    height: '140px',
+    width: '225px',
+    minWidth: '225px',
+    height: '90px',
     marginLeft: '2rem',
     backgroundColor: '#131313',
     justifyContent: 'center',

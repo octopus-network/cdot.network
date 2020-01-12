@@ -7,8 +7,8 @@ export const polkadot: Partner = {
     type: 'svg',
     svg: '/assets/images/partner/polka_world.svg'
   },
-  width: 254,
-  height: 36
+  width: 192,
+  height: 27
 }
 
 export const rustcc: Partner = {
@@ -19,8 +19,8 @@ export const rustcc: Partner = {
     default: '/assets/images/partner/rust.cc.png',
     large: '/assets/images/partner/rust.cc@2x.png'
   },
-  width: 203,
-  height: 55
+  width: 154,
+  height: 40
 }
 
 export const polkabase: Partner = {
@@ -30,8 +30,8 @@ export const polkabase: Partner = {
     type: 'svg',
     svg: '/assets/images/partner/polkabase.svg'
   },
-  width: 270,
-  height: 50
+  width: 184,
+  height: 35
 }
 
 export const oneBlockPlus: Partner = {
@@ -41,6 +41,6 @@ export const oneBlockPlus: Partner = {
     type: 'svg',
     svg: '/assets/images/partner/one_block+.svg'
   },
-  width: 169,
-  height: 58
+  width: 130,
+  height: 49
 }
