@@ -57,22 +57,21 @@ const PartnersArea: React.FC<NewsAreaProps> = ({ partners }) => {
         <Stack.Item styles={{ root: { width: '100%' } }} align='center'>
           <Stack wrap tokens={{ childrenGap: 20 }} horizontal horizontalAlign='center'>
             {partners.map(({ name, imgUrl, width, height, to }) => (
-              <Stack.Item key={name}>
-                <Card
-                  className={classNames.card}
-                >
-                  <Card.Section>
-                    {/* tip: external link */}
-                    <a target='_blank' rel='noopener noreferrer' href={to}>
-                      <Image
-                        width={width}
-                        height={height}
-                        src={imgUrl.type === 'svg' ? imgUrl.svg : (screenWidth > 640 ? imgUrl.large : imgUrl.default)}
-                      />
-                    </a>
-                  </Card.Section>
-                </Card>
-              </Stack.Item>
+              <Card
+                key={name}
+                className={classNames.card}
+              >
+                <Card.Section>
+                  {/* tip: external link */}
+                  <a target='_blank' rel='noopener noreferrer' href={to}>
+                    <Image
+                      width={width}
+                      height={height}
+                      src={imgUrl.type === 'svg' ? imgUrl.svg : (screenWidth > 640 ? imgUrl.large : imgUrl.default)}
+                    />
+                  </a>
+                </Card.Section>
+              </Card>
             ))}
           </Stack>
         </Stack.Item>

@@ -94,7 +94,7 @@ const ParticipantsArea: React.FC<Props> = ({ participants }) => {
               {participants.map(participant => (
                 <div
                   key={participant.title}
-                  className={mergeStyles('ms-Grid-col', 'ms-md4', 'ms-sm12', {
+                  className={mergeStyles('ms-Grid-col', 'ms-md6', 'ms-sm12', {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',

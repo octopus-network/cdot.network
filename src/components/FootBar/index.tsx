@@ -6,7 +6,10 @@ import { faGithub, faWeixin, faTwitter } from '@fortawesome/free-brands-svg-icon
 
 const classNames = mergeStyleSets({
   root: {
-    height: '200px'
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    height: '150px'
   },
   banner: {
     background: 'no-repeat center center',
@@ -21,7 +24,8 @@ const classNames = mergeStyleSets({
     }
   },
   left: {
-    marginLeft: '6rem',
+    marginLeft: '101px',
+    paddingTop: '90px',
     selectors: {
       '@media(max-width: 1024px)': {
         marginLeft: '1rem'
@@ -29,7 +33,8 @@ const classNames = mergeStyleSets({
     }
   },
   right: {
-    marginRight: '6rem',
+    marginRight: '146px',
+    paddingTop: '89px',
     selectors: {
       '@media(max-width: 1024px)': {
         marginRight: '1rem'
@@ -43,31 +48,15 @@ const classNames = mergeStyleSets({
 })
 
 const FootBar: React.FC = () => {
-  const [width, setWidth] = useState(window.screen.width)
-  useEffect(() => {
-    const onResize = () => {
-      setWidth(window.screen.width)
-    }
-    window.addEventListener('resize', onResize)
-    return () => {
-      window.removeEventListener('resize', onResize)
-    }
-  }, [])
   return (
-    <Stack
-      horizontal={width > 640}
-      horizontalAlign={width > 640 ? 'space-between' : 'center'}
-      verticalAlign='center'
-      tokens={{
-        childrenGap: width > 640 ? 0 : '2rem'
-      }}
+    <div
       className={mergeStyles(classNames.root, classNames.banner)}
     >
       <Stack.Item>
         <Stack
           className={classNames.left}
           tokens={{
-            childrenGap: '1rem'
+            childrenGap: '17px'
           }}
           horizontal
           horizontalAlign='center'
@@ -93,7 +82,7 @@ const FootBar: React.FC = () => {
       <Stack.Item>
         <Stack
           className={classNames.right}
-          tokens={{ childrenGap: '3rem' }}
+          tokens={{ childrenGap: '44px' }}
           horizontal
         >
           <Stack.Item>
@@ -110,7 +99,7 @@ const FootBar: React.FC = () => {
           </Stack.Item>
         </Stack>
       </Stack.Item>
-    </Stack>
+    </div>
   )
 }
 
