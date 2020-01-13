@@ -4,9 +4,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js 12.x
@@ -19,7 +17,7 @@ jobs:
         path: node_modules
         key: ${{ runner.OS }}-npm-cache
         restore-keys: |
-          ${{ runner.OS }}-npm-cache-
+          ${{ runner.OS }}-npm-cache
     - name: Install Dependencies
       run: yarn --frozen-lockfile --non-interactive
     - name: Lint
