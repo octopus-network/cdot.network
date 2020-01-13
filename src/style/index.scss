@@ -32,7 +32,8 @@ body {
   max-width: 1055px;
 
   @media (min-width: $ms-screen-min-md) and (max-width: $ms-screen-max-lg) {
-    padding-left: 70px
+    margin-left: auto;
+    padding-left: 0.75rem
   }
 
   @media (max-width: $ms-screen-max-md) {
