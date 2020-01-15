@@ -74,7 +74,7 @@ const IntroductionArea: React.FC<IntroductionAreaProps> = ({ className }) => {
         verticalAlign='center'
         horizontalAlign='space-between'
       >
-        <Stack.Item>
+        <Stack.Item className='cdot-introduction-stack-left'>
           <Stack
             wrap={true}
             tokens={{
@@ -116,7 +116,7 @@ const IntroductionArea: React.FC<IntroductionAreaProps> = ({ className }) => {
             </Stack.Item>
           </Stack>
         </Stack.Item>
-        <Stack.Item>
+        <Stack.Item className='cdot-introduction-stack-right'>
           <Stack
             styles={{
               root: {
