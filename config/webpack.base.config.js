@@ -61,6 +61,7 @@ exports.config = {
     extensions: ['*', '.js', '.json', '.ts', '.tsx'],
     alias: {
       'react-dom': '@hot-loader/react-dom',
+      '~asset': resolve(__dirname, '..', 'src', 'assets'),
       '~type': resolve(__dirname, '..', 'types'),
       '~api': resolve(__dirname, '..', 'src', 'api'),
       '~component': resolve(__dirname, '..', 'src', 'components'),
