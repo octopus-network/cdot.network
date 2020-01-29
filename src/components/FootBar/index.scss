@@ -1,0 +1,38 @@
+@import "~office-ui-fabric-react/dist/sass/variables/_Responsive.Variables.scss";
+
+.cdot-foot-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 150px;
+  padding-left: 100px;
+  padding-right: 101px;
+
+  @media (max-width: $ms-screen-max-md) {
+    padding: 0 0.5rem
+  }
+
+  &--left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .separator {
+      margin: auto 18px
+    }
+
+    .copyright {
+      color: #dbdbdb;
+      font-size: 18px;
+      line-height: 18px
+    }
+  }
+
+  &--right {
+    & * {
+      margin: auto 22px
+    }
+  }
+}
