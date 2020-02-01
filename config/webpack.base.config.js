@@ -93,6 +93,10 @@ exports.config = {
         }
       },
       {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
+      },
+      {
         test: /\.less$/i,
         use: lessLoaders
       },
