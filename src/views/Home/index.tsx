@@ -24,7 +24,6 @@ const HomePage: React.FC = () => {
   return (
     <Fabric className='cdot-page'>
       <Header
-        className='cdot-header'
         items={[
           { name: 'About', url: '/contact' },
           { name: 'Github', url: 'https://github.com/cdot-network' },

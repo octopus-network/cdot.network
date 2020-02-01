@@ -1,0 +1,85 @@
+@import "~office-ui-fabric-react/dist/sass/variables/_Responsive.Variables.scss";
+
+$cdot-header-height: 650.25px;
+$cdot-command-bar-height: 50px;
+
+.cdot-command-bar {
+  position: absolute;
+  height: $cdot-command-bar-height;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: white;
+
+  &--inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1240px
+  }
+
+  &--left {
+    padding-left: 0.5rem
+  }
+
+  &--right {
+    padding-right: 0.5rem
+  }
+
+  &--item {
+    height: 100%;
+    color: #dedede;
+    text-decoration: none;
+    text-align: center;
+    line-height: $cdot-command-bar-height;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0 24px;
+
+    &:hover {
+      text-decoration: underline
+    }
+  }
+}
+
+.cdot-header {
+  height: $cdot-header-height;
+  margin-top: $cdot-command-bar-height;
+
+  &--banner {
+    z-index: 0;
+    top: $cdot-command-bar-height;
+    left: 0;
+    position: absolute
+  }
+
+  &--inner {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: start;
+    max-width: 1046px;
+    padding: 0 0.75rem;
+
+    > * {
+      margin-top: 34px
+    }
+  }
+
+  &--title {
+    z-index: 1;
+    color: #cacaca;
+    font-weight: lighter;
+    font-size: 57px;
+
+    @media (max-width: $ms-screen-max-md) {
+      font-size: 46px
+    }
+  }
+}
