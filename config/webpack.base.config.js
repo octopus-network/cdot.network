@@ -187,7 +187,7 @@ exports.config = {
         to: resolve(__dirname, '..', 'dist', 'assets')
       }]),
     new DefinePlugin({
-      PUBLIC_URL: process.env.PUBLIC_URL
+      PUBLIC_URL: process.env.PUBLIC_URL || ''
     })
   ].filter(Boolean),
   performance: {
