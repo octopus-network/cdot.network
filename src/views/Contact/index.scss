@@ -1,0 +1,45 @@
+@import "~office-ui-fabric-react/dist/sass/variables/_Responsive.Variables.scss";
+
+.cdot-contact {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.25;
+    z-index: -1;
+    background: no-repeat center center;
+    background-color: black;
+    background-attachment: scroll;
+    background-image: url('../../assets/images/background/contact.png');
+    background-size: cover;
+
+    @media (min-width: $ms-screen-min-md) {
+      background-image: url('../../assets/images/background/contact@2x.png')
+    }
+  }
+
+  &--inner {
+    color: #b3b3b3;
+    background: transparent;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+  }
+
+  &--font {
+    font-size: 30px;
+    font-weight: 400
+  }
+
+  &--button {
+    cursor: pointer
+  }
+}

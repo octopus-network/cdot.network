@@ -3,6 +3,7 @@ import {
   Text, PrimaryButton,
   CommandBar as FabricCommandBar, Image
 } from 'office-ui-fabric-react'
+import 'office-ui-fabric-react/dist/sass/Fabric.scss'
 import { Link } from 'react-router-dom'
 
 import './index.scss'
