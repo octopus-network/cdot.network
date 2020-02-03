@@ -13,6 +13,9 @@ const ContactPage: React.FC = () => (
     ]}/>
     <div className='cdot-contact--inner'>
       <Image
+        style={{
+          marginBottom: 52
+        }}
         src={require('~asset/images/title/comingsoon.png')}
       />
       <div className='cdot-contact--font'>contact with the team</div>
