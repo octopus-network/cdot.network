@@ -181,11 +181,8 @@ exports.config = {
         from: resolve(__dirname, '..', 'public'),
         to: resolve(__dirname, '..', 'dist'),
         ignore: ['index.html', 'manifest.json']
-      },
-      {
-        from: resolve(__dirname, '..', 'src', 'assets'),
-        to: resolve(__dirname, '..', 'dist', 'assets')
-      }]),
+      }
+    ]),
     new DefinePlugin({
       PUBLIC_URL: process.env.PUBLIC_URL || ''
     })

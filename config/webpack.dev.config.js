@@ -32,17 +32,6 @@ module.exports = merge(baseWebpackConfig, {
         test: /\.jsx?$/,
         use: 'happypack/loader?id=js',
         exclude: /node_modules/
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 10000,
-              name: 'img/[name].[hash:7].[ext]'
-            }
-          }]
       }
     ]
   },
