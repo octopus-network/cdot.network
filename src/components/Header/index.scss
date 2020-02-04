@@ -51,6 +51,8 @@ $cdot-command-bar-height: 50px;
 .cdot-header {
   height: $cdot-header-height;
   margin-top: $cdot-command-bar-height;
+  display: flex;
+  align-items: center;
   //
   background: no-repeat center center;
   background-color: transparent;
