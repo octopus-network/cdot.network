@@ -51,6 +51,15 @@ $cdot-command-bar-height: 50px;
 .cdot-header {
   height: $cdot-header-height;
   margin-top: $cdot-command-bar-height;
+  //
+  background: no-repeat center center;
+  background-color: transparent;
+  background-size: cover;
+  background-image: url("../../assets/images/background/bg1.png");
+
+  @media (min-width: $ms-screen-min-md) {
+    background-image: url("../../assets/images/background/bg1@2x.png")
+  }
 
   &--banner {
     z-index: 0;

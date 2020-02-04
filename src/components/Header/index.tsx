@@ -56,16 +56,6 @@ const Header: React.FC<HeaderProps> = ({
   <div>
     <CommandBar {...props}/>
     <div className='cdot-header'>
-      <Image
-        className='cdot-header--banner'
-        width='100%'
-        height={650.25}
-        src={require('~asset/images/background/bg1.png')}
-        srcSet={`
-          ${require('~asset/images/background/bg1.png')},
-          ${require('~asset/images/background/bg1@2x.png')} 2x
-        `}
-      />
       <div className='cdot-header--inner'>
         <Image
           width={166}
