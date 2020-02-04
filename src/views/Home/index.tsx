@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from '~component/Header'
-import { Fabric } from 'office-ui-fabric-react'
-import { News, Participant, Partner } from '~type/index'
+import { News, Participant, Partner } from '~type'
 import {
   news1, news2, news3, news4,
   oneBlockPlus, polkabase, polkadot, rustcc,
