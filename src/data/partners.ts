@@ -1,11 +1,11 @@
-import { Partner } from '~type/index'
+import { Partner } from '~type'
 
 export const polkadot: Partner = {
   name: 'polkaworld',
   to: 'https://www.polkaworld.org',
   imgUrl: {
     type: 'svg',
-    svg: '/assets/images/partner/polka_world.svg'
+    svg: require('~asset/images/partner/polka_world.svg')
   },
   width: 192,
   height: 27
@@ -16,8 +16,8 @@ export const rustcc: Partner = {
   to: 'https://rust.cc',
   imgUrl: {
     type: 'image',
-    default: '/assets/images/partner/rust.cc.png',
-    large: '/assets/images/partner/rust.cc@2x.png'
+    default: require('~asset/images/partner/rust.cc.png'),
+    large: require('~asset/images/partner/rust.cc@2x.png')
   },
   width: 154,
   height: 40
@@ -28,7 +28,7 @@ export const polkabase: Partner = {
   to: 'https://www.polkabase.com',
   imgUrl: {
     type: 'svg',
-    svg: '/assets/images/partner/polkabase.svg'
+    svg: require('~asset/images/partner/polkabase.svg')
   },
   width: 184,
   height: 35
@@ -39,7 +39,7 @@ export const oneBlockPlus: Partner = {
   to: '/contact',
   imgUrl: {
     type: 'svg',
-    svg: '/assets/images/partner/one_block+.svg'
+    svg: require('~asset/images/partner/one_block+.svg')
   },
   width: 130,
   height: 49

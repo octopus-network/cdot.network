@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Stack, Image, Text, mergeStyleSets } from 'office-ui-fabric-react'
 import { Card } from '@uifabric/react-cards'
-import { Partner } from '~type/index'
+import { Partner } from '~type'
 
 export interface NewsAreaProps {
   partners: Partner[]
