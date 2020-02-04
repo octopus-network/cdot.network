@@ -21,7 +21,7 @@ const FootBar: React.FC = () => {
       />
       <div className='cdot-foot-bar--inner'>
         <div className='cdot-foot-bar--left'>
-          <Image width={109} height={38} src='/assets/images/title/cdot-gray.svg'/>
+          <Image width={109} height={38} src={require('~asset/images/title/cdot-gray.svg')}/>
           <Separator
             className='separator'
             styles={{
