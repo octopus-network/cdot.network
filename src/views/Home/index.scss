@@ -1,9 +1,12 @@
 @import "~office-ui-fabric-react/dist/sass/variables/_Responsive.Variables.scss";
 
+$innovation-area-offset: 76;
+
 .cdot-home-page {
   .cdot-introduction-area {
     width: 100%;
     min-height: 756px;
+    margin-bottom: $innovation-area-offset+px;
     display: flex;
     //
     background: no-repeat center center;
@@ -59,30 +62,51 @@
   }
 }
 
-// todo: remove these
-.cdot-introduction {
-  height: 756.75px;
+.cdot-innovation-area {
+  min-height: 756px;
+  color: white;
 
-  .cdot-introduction-stack {
-    margin-left: 99px;
-    margin-right: 190px;
+  &--inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    min-height: 492px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  }
 
-    @media (max-width: $ms-screen-max-lg) {
-      margin: auto 0
+  &--banner {
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1400px;
+    min-height: 449px;
+    padding: 0 0.75rem;
+    background: url("../../assets/images/background/bg4.svg") center center no-repeat
+  }
+
+  &--title {
+    font-size: 38px;
+    text-align: center;
+    margin-top: -$innovation-area-offset+px;
+
+    @media (max-width: $ms-screen-max-md) {
+      font-size: 24px
     }
+  }
 
-    .cdot-introduction-stack-left {
-      max-width: 421px;
+  &--content {
+    max-width: 537px;
+    padding-top: 13px;
+    text-align: center;
+    font-size: 20px;
+    color: #b3b3b3;
 
-      @media (max-width: $ms-screen-max-lg) {
-        width: 100%
-      }
-    }
-
-    .cdot-introduction-stack-right {
-      @media (max-width: $ms-screen-max-lg) {
-        width: 100%
-      }
+    @media (max-width: $ms-screen-max-md) {
+      font-size: 1rem
     }
   }
 }

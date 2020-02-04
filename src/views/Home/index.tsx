@@ -22,7 +22,7 @@ const participants: Participant[] = [participant1, participant2, participant3, p
 
 const HomePage: React.FC = () => {
   return (
-    <Fabric className='cdot-page cdot-home-page'>
+    <div className='cdot-page cdot-home-page'>
       <Header
         items={[
           { name: 'About', url: '/contact' },
@@ -31,12 +31,12 @@ const HomePage: React.FC = () => {
         ]}
       />
       <IntroductionArea/>
-      <InnovationArea className='cdot-innovation'/>
+      <InnovationArea/>
       <ParticipantsArea participants={participants}/>
       <NewsArea news={news}/>
       <PartnersArea partners={partners}/>
       <FootBar/>
-    </Fabric>
+    </div>
   )
 }
 
