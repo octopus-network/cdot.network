@@ -9,7 +9,7 @@ import './index.less'
 
 loadTheme({
   defaultFontStyle: {
-    fontFamily: 'Alata, Alata-Regular, sans-serif',
+    fontFamily: 'Alata, Alata-Regular',
     color: 'white'
   },
   palette: {

@@ -1,0 +1,84 @@
+@import "~office-ui-fabric-react/dist/sass/variables/_Responsive.Variables.scss";
+
+.cdot-home-page {
+  .cdot-introduction-area {
+    width: 100%;
+    min-height: 756px;
+    display: flex;
+    //
+    background: no-repeat center center;
+    background-color: transparent;
+    background-size: cover;
+    background-image: url("../../assets/images/background/bg2.png");
+
+    &--inner {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 1160px
+    }
+
+    &--title {
+      font-size: 38px;
+
+      @media (max-width: $ms-screen-max-md) {
+        font-size: 24px
+      }
+    }
+
+    &--content {
+      font-size: 20px;
+      color: #b3b3b3;
+
+      @media (max-width: $ms-screen-max-md) {
+        font-size: 1rem
+      }
+    }
+
+    &--left {
+      margin: auto 0;
+      max-width: 421px;
+      display: flex;
+      flex-direction: column;
+
+      & > * {
+        margin-top: 12px
+      }
+    }
+
+    &--right {
+      margin: auto 0
+    }
+  }
+}
+
+// todo: remove these
+.cdot-introduction {
+  height: 756.75px;
+
+  .cdot-introduction-stack {
+    margin-left: 99px;
+    margin-right: 190px;
+
+    @media (max-width: $ms-screen-max-lg) {
+      margin: auto 0
+    }
+
+    .cdot-introduction-stack-left {
+      max-width: 421px;
+
+      @media (max-width: $ms-screen-max-lg) {
+        width: 100%
+      }
+    }
+
+    .cdot-introduction-stack-right {
+      @media (max-width: $ms-screen-max-lg) {
+        width: 100%
+      }
+    }
+  }
+}

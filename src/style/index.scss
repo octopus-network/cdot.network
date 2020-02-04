@@ -42,33 +42,6 @@ body {
   }
 }
 
-.cdot-introduction {
-  height: 756.75px;
-
-  .cdot-introduction-stack {
-    margin-left: 99px;
-    margin-right: 190px;
-
-    @media (max-width: $ms-screen-max-lg) {
-      margin: auto 0
-    }
-
-    .cdot-introduction-stack-left {
-      max-width: 421px;
-
-      @media (max-width: $ms-screen-max-lg) {
-        width: 100%
-      }
-    }
-
-    .cdot-introduction-stack-right {
-      @media (max-width: $ms-screen-max-lg) {
-        width: 100%
-      }
-    }
-  }
-}
-
 .cdot-innovation {
   height: 694px
 }
