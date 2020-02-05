@@ -1,7 +1,5 @@
 import React from 'react'
-import {
-  Text, PrimaryButton
-} from 'office-ui-fabric-react'
+import { PrimaryButton } from 'office-ui-fabric-react'
 import { introduction1, introduction2, introduction3 } from '~data/introductions'
 import IntroduceCard from '~component/IntroduceCard'
 import { Link } from 'react-router-dom'

@@ -2,63 +2,61 @@
 
 $innovation-area-offset: 76;
 
-.cdot-home-page {
-  .cdot-introduction-area {
-    width: 100%;
-    min-height: 756px;
-    margin-bottom: $innovation-area-offset+px;
+.cdot-introduction-area {
+  width: 100%;
+  min-height: 756px;
+  margin-bottom: $innovation-area-offset+px;
+  display: flex;
+  //
+  background: no-repeat center center;
+  background-color: transparent;
+  background-size: cover;
+  background-image: url("../../assets/images/background/bg2.png");
+
+  @media (min-width: $ms-screen-max-md) {
+    background-image: url("../../assets/images/background/bg2@2x.png")
+  }
+
+  &--inner {
     display: flex;
-    //
-    background: no-repeat center center;
-    background-color: transparent;
-    background-size: cover;
-    background-image: url("../../assets/images/background/bg2.png");
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1160px
+  }
 
-    @media (min-width: $ms-screen-max-md) {
-      background-image: url("../../assets/images/background/bg2@2x.png")
+  &--title {
+    font-size: 38px;
+
+    @media (max-width: $ms-screen-max-md) {
+      font-size: 24px
     }
+  }
 
-    &--inner {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin: 0 auto;
-      width: 100%;
-      max-width: 1160px
+  &--content {
+    font-size: 20px;
+    color: #b3b3b3;
+
+    @media (max-width: $ms-screen-max-md) {
+      font-size: 1rem
     }
+  }
 
-    &--title {
-      font-size: 38px;
+  &--left {
+    margin: auto 0;
+    max-width: 421px;
+    display: flex;
+    flex-direction: column;
 
-      @media (max-width: $ms-screen-max-md) {
-        font-size: 24px
-      }
+    & > * {
+      margin-top: 12px
     }
+  }
 
-    &--content {
-      font-size: 20px;
-      color: #b3b3b3;
-
-      @media (max-width: $ms-screen-max-md) {
-        font-size: 1rem
-      }
-    }
-
-    &--left {
-      margin: auto 0;
-      max-width: 421px;
-      display: flex;
-      flex-direction: column;
-
-      & > * {
-        margin-top: 12px
-      }
-    }
-
-    &--right {
-      margin: auto 0
-    }
+  &--right {
+    margin: auto 0
   }
 }
 
@@ -73,7 +71,7 @@ $innovation-area-offset: 76;
     margin: 0 auto;
     min-height: 492px;
     width: 100%;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)
   }
 
   &--banner {
@@ -107,6 +105,41 @@ $innovation-area-offset: 76;
 
     @media (max-width: $ms-screen-max-md) {
       font-size: 1rem
+    }
+  }
+}
+
+.cdot-news-area {
+  min-height: 700px;
+  background: url("../../assets/images/background/bg5.svg") center center no-repeat;
+
+  &--inner {
+    margin: 0 auto;
+    display: flex;
+    max-width: 1300px;
+    justify-content: center;
+    flex-direction: column;
+    width: calc(100% - 1.5rem);
+    padding: 0 0.75rem
+  }
+
+  &--title {
+    font-size: 50px;
+    text-align: center;
+
+    @media (max-width: $ms-screen-max-md) {
+      font-size: 24px
+    }
+  }
+
+  &--content {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+
+    & > .cdot-news-card {
+      margin: 0 8px
     }
   }
 }

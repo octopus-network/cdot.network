@@ -1,0 +1,46 @@
+@import "~office-ui-fabric-react/dist/sass/variables/_Responsive.Variables.scss";
+
+.cdot-news-card {
+  width: 298px;
+  height: 318px;
+  background: black;
+  color: white;
+
+  &--link {
+    width: 103px;
+    margin-top: 48px;
+    font-size: 15px
+  }
+
+  &:hover {
+    background: white;
+    color: black;
+    transition: ease-in-out 0.35s;
+
+    .cdot-news-card--link {
+      color: black
+    }
+  }
+
+  &--inner {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 45px);
+    padding: 45px 19px 0 19px
+  }
+
+  &--title {
+    font-size: 21px
+  }
+
+  &--description {
+    font-size: 15px;
+    height: 90px;
+    overflow-y: hidden;
+    color: #666;
+
+    @media (max-width: $ms-screen-max-md) {
+      font-size: 1rem
+    }
+  }
+}
