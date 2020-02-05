@@ -15,14 +15,14 @@ const IntroductionArea: React.FC = () => {
     <div className='cdot-introduction-area'>
       <div className='cdot-introduction-area--inner'>
         <div className='cdot-introduction-area--left'>
-          <Text className='cdot-introduction-area--title'>
+          <div className='cdot-introduction-area--title'>
             A closer look at cdot
-          </Text>
-          <Text className='cdot-introduction-area--content'>
+          </div>
+          <div className='cdot-introduction-area--content'>
             Cdot addresses key barriers facing blockchain
             innovation: Trustless Interoperation, Secure Transaction,
             Sustainable Mechanism.
-          </Text>
+          </div>
           <Link to='/contact' style={{ marginTop: 22 }}>
             <PrimaryButton styles={{
               root: {
