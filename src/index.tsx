@@ -1,4 +1,5 @@
 import { hot } from 'react-hot-loader' // react-hot-loader before react and react-dom, see https://github.com/gaearon/react-hot-loader#getting-started
+import { polyfill } from 'smoothscroll-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { loadTheme } from 'office-ui-fabric-react/lib/Styling'
@@ -6,6 +7,9 @@ import * as serviceWorker from './serviceWorker'
 import App from './App'
 
 import './index.less'
+
+// enable smooth-scroll
+polyfill()
 
 loadTheme({
   defaultFontStyle: {
