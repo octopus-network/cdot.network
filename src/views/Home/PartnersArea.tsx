@@ -63,7 +63,7 @@ const PartnersArea: React.FC<NewsAreaProps> = ({ partners }) => {
               >
                 <Card.Section>
                   {/* tip: external link */}
-                  <a target='_blank' rel='noopener noreferrer' href={to}>
+                  <a target={/^https?/.test(to) ? '_blank' : ''} rel='noopener noreferrer' href={to}>
                     <Image
                       width={width}
                       height={height}

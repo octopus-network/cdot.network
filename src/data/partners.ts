@@ -36,7 +36,7 @@ export const polkabase: Partner = {
 
 export const oneBlockPlus: Partner = {
   name: 'one block+',
-  to: '/contact',
+  to: '#',
   imgUrl: {
     type: 'svg',
     svg: require('~asset/images/partner/one_block+.svg')
