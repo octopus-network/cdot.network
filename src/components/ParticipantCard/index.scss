@@ -1,0 +1,17 @@
+@import "~office-ui-fabric-react/dist/sass/variables/_Responsive.Variables.scss";
+
+.cdot-participant-card {
+  min-height: 372px;
+
+  &--title {
+    font-size: 28px;
+
+    @media (max-width: $ms-screen-max-md) {
+      font-size: 24px
+    }
+  }
+
+  &--description {
+    background: linear-gradient(#bcbcbc, #525052)
+  }
+}
