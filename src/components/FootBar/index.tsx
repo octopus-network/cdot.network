@@ -36,8 +36,12 @@ const FootBar: React.FC = () => {
           </div>
         </div>
         <div className='cdot-foot-bar--right'>
-          <FontAwesomeIcon color='rgb(136, 136, 136)' size='2x' icon={faTwitter}/>
-          <FontAwesomeIcon color='rgb(136, 136, 136)' size='2x' icon={faGithub}/>
+          <a target='_blank' rel='noopener noreferrer' href='https://twitter.com/CdotNetwork'>
+            <FontAwesomeIcon color='rgb(136, 136, 136)' size='2x' icon={faTwitter}/>
+          </a>
+          <a target='_blank' rel='noopener noreferrer' href='https://github.com/cdot-network'>
+            <FontAwesomeIcon color='rgb(136, 136, 136)' size='2x' icon={faGithub}/>
+          </a>
           <FontAwesomeIcon color='rgb(136, 136, 136)' size='2x' icon={faWeixin}/>
           <FontAwesomeIcon color='rgb(136, 136, 136)' size='2x' icon={faEnvelope}/>
         </div>
