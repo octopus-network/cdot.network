@@ -22,7 +22,7 @@ const ParticipantsArea: React.FC<Props> = ({ participants }) => {
             style={{ marginTop: 17 }}
           >
             Cdot is an open network composed of several types of participants.
-            All participants take action in a strategythat maximizes their own interests,
+            All participants take action in a strategy that maximizes their own interests,
             but together they present a decentralized circulation network for crypto assets.
           </div>
           <Link to='/contact' style={{ marginTop: 16 }}>
