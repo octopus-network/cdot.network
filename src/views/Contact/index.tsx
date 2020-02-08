@@ -13,6 +13,7 @@ const ContactPage: React.FC = () => (
     ]}/>
     <div className='cdot-contact--inner'>
       <Image
+        width='auto'
         style={{
           marginBottom: 52
         }}
