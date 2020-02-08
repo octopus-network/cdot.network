@@ -33,6 +33,10 @@ $innovation-area-offset: 76;
     @media (max-width: $ms-screen-max-md) {
       font-size: 24px
     }
+
+    @media (max-width: $ms-screen-max-lg) {
+      text-align: center
+    }
   }
 
   &--content {
@@ -42,6 +46,10 @@ $innovation-area-offset: 76;
     @media (max-width: $ms-screen-max-md) {
       font-size: 1rem
     }
+
+    @media (max-width: $ms-screen-max-lg) {
+      text-align: center
+    }
   }
 
   &--left {
@@ -49,6 +57,11 @@ $innovation-area-offset: 76;
     max-width: 421px;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: $ms-screen-max-lg) {
+      justify-content: center;
+      align-items: center
+    }
 
     & > * {
       margin-top: 12px
