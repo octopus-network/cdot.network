@@ -69,7 +69,11 @@ $innovation-area-offset: 76;
   }
 
   &--right {
-    margin: auto 0
+    margin: auto 0;
+
+    & > * {
+      margin-top: 32px
+    }
   }
 }
 
