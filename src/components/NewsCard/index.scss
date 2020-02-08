@@ -9,7 +9,11 @@
   &--link {
     width: 103px;
     margin-top: 48px;
-    font-size: 15px
+    font-size: 15px;
+
+    @media (max-width: $ms-screen-max-md) {
+      margin-top: 24px
+    }
   }
 
   &:hover {
@@ -26,7 +30,11 @@
     display: flex;
     flex-direction: column;
     height: calc(100% - 45px);
-    padding: 45px 19px 0 19px
+    padding: 45px 19px 0 19px;
+
+    @media (max-width: $ms-screen-max-md) {
+      padding: 24px 0 0 0
+    }
   }
 
   &--title {
@@ -40,6 +48,7 @@
     color: #666;
 
     @media (max-width: $ms-screen-max-md) {
+      height: auto;
       font-size: 1rem
     }
   }
