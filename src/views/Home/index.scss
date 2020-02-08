@@ -92,7 +92,7 @@ $innovation-area-offset: 76;
     z-index: -1;
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: calc(100% - 1.5rem);
     max-width: 1400px;
     min-height: 449px;
     padding: 0 0.75rem;
