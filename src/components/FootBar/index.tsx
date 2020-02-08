@@ -5,6 +5,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faWeixin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 import './index.scss'
+import { Link } from 'react-router-dom'
 
 const FootBar: React.FC = () => {
   return (
@@ -43,7 +44,9 @@ const FootBar: React.FC = () => {
             <FontAwesomeIcon color='rgb(136, 136, 136)' size='2x' icon={faGithub}/>
           </a>
           <FontAwesomeIcon color='rgb(136, 136, 136)' size='2x' icon={faWeixin}/>
-          <FontAwesomeIcon color='rgb(136, 136, 136)' size='2x' icon={faEnvelope}/>
+          <Link to='/contact'>
+            <FontAwesomeIcon color='rgb(136, 136, 136)' size='2x' icon={faEnvelope}/>
+          </Link>
         </div>
       </div>
     </div>
