@@ -1,6 +1,5 @@
 import React from 'react'
-import { mergeStyleSets, mergeStyles, PrimaryButton, Text } from 'office-ui-fabric-react'
-import { Card } from '@uifabric/react-cards'
+import { mergeStyles, PrimaryButton } from 'office-ui-fabric-react'
 import { Participant } from '~type'
 import { Link } from 'react-router-dom'
 import ParticipantCard from '~component/ParticipantCard'
