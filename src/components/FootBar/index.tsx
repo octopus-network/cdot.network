@@ -1,11 +1,10 @@
 import React from 'react'
-import { Image, Separator } from 'office-ui-fabric-react'
+import { HoverCard, HoverCardType, Image, Separator } from 'office-ui-fabric-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faWeixin, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faTwitter, faWeixin } from '@fortawesome/free-brands-svg-icons'
 
 import './index.scss'
-import { Link } from 'react-router-dom'
 
 const FootBar: React.FC = () => {
   return (
@@ -43,10 +42,34 @@ const FootBar: React.FC = () => {
           <a target='_blank' rel='noopener noreferrer' href='https://github.com/cdot-network'>
             <FontAwesomeIcon color='rgb(136, 136, 136)' size='2x' icon={faGithub}/>
           </a>
-          <FontAwesomeIcon color='rgb(136, 136, 136)' size='2x' icon={faWeixin}/>
-          <Link to='/contact'>
+          <HoverCard
+            type={HoverCardType.plain}
+            plainCardProps={{
+              onRenderPlainCard: () => (
+                <Image
+                  src={require('~asset/images/wechat_qr.png')}
+                  srcSet={`
+                    ${require('~asset/images/wechat_qr.png')},
+                    ${require('~asset/images/wechat_qr@2x.png')} 2x
+                  `}
+                />
+              )
+            }}
+          >
+            <FontAwesomeIcon color='rgb(136, 136, 136)' size='2x' icon={faWeixin}/>
+          </HoverCard>
+          <HoverCard
+            type={HoverCardType.plain}
+            plainCardProps={{
+              onRenderPlainCard: () => (
+                <span style={{ margin: '9px 10px 19px 10px', color: '#000' }}>
+                  hello@cdot.network
+                </span>
+              )
+            }}
+          >
             <FontAwesomeIcon color='rgb(136, 136, 136)' size='2x' icon={faEnvelope}/>
-          </Link>
+          </HoverCard>
         </div>
       </div>
     </div>
