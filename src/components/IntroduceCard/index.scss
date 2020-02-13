@@ -1,3 +1,5 @@
+@import "~office-ui-fabric-react/dist/sass/variables/_Responsive.Variables.scss";
+
 .cdot-introduce-card {
   background-color: #0b0c0e;
   height: 130px;
@@ -8,13 +10,21 @@
   justify-content: start;
   transition: 0.2s;
 
+  @media (max-width: $ms-screen-max-lg) {
+    width: 100%
+  }
+
   &--icon {
     flex: 0 0 65px;
     margin-left: 33px;
     margin-right: 21px;
     width: 65px;
     height: 65px;
-    transition: 0.2s
+    transition: 0.2s;
+
+    @media (max-width: $ms-screen-max-lg) {
+      margin: 0 0.75rem
+    }
   }
 
   &--content {
@@ -24,5 +34,22 @@
   &:hover {
     background-color: white;
     color: black
+  }
+
+  &--title {
+    font-size: 21px;
+    color: white;
+
+    @media (max-width: $ms-screen-max-lg) {
+      font-size: 1.5rem
+    }
+  }
+
+  &--introduction {
+    font-size: 15px;
+    color: #bcbcbc;
+    @media (max-width: $ms-screen-max-lg) {
+      font-size: 1rem
+    }
   }
 }

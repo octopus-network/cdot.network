@@ -8,42 +8,22 @@ export interface IntroduceCardProps extends Introduction {
   to?: string
 }
 
-const classNames = mergeStyleSets({
-  icon: {
-    padding: '33px 22px 32px 33px'
-  },
-  title: {
-    fontSize: '1.75rem',
-    fontWeight: '400',
-    color: '#fff',
-    selectors: {
-      '@media(max-width: 1024px)': {
-        fontSize: '1.5rem'
-      }
-    }
-  },
-  introductionLabel: {
-    width: '100%'
-  },
-  introduction: {
-    fontSize: '1.25rem',
-    color: '#BCBCBC',
-    selectors: {
-      '@media(max-width: 1024px)': {
-        fontSize: '1rem'
-      }
-    }
-  }
-})
-
 const IntroduceCard: React.FC<IntroduceCardProps> = ({ title, description, imgUrl }) => {
   return (
     <div className={mergeStyles('cdot-introduce-card', {
+      color: 'white',
       selectors: {
         ':hover': {
+          color: 'black',
           selectors: {
             '.cdot-introduce-card--icon': {
               backgroundImage: `url(${imgUrl.hover})`
+            },
+            '.cdot-introduce-card--title': {
+              color: '#000000'
+            },
+            '.cdot-introduce-card--introduction': {
+              color: '#333333'
             }
           }
         }
@@ -57,10 +37,10 @@ const IntroduceCard: React.FC<IntroduceCardProps> = ({ title, description, imgUr
       >
       </div>
       <div className='cdot-introduce-card--content'>
-        <Text className={classNames.introduction}>
+        <Text className='cdot-introduce-card--title'>
           {title}
         </Text>
-        <Text className={classNames.introduction} block>
+        <Text className='cdot-introduce-card--introduction' block>
           {description}
         </Text>
       </div>
