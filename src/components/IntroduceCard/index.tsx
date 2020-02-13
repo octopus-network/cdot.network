@@ -1,6 +1,5 @@
-import React from 'react'
-import { Card } from '@uifabric/react-cards'
-import { Text, Image, mergeStyleSets } from 'office-ui-fabric-react'
+import React, { useMemo, useState } from 'react'
+import { Text, mergeStyleSets, mergeStyles } from 'office-ui-fabric-react'
 import { Introduction } from '~type'
 
 import './index.scss'
@@ -10,11 +9,6 @@ export interface IntroduceCardProps extends Introduction {
 }
 
 const classNames = mergeStyleSets({
-  root: {
-    minWidth: '100%',
-    width: '100%',
-    height: '130px'
-  },
   icon: {
     padding: '33px 22px 32px 33px'
   },
@@ -44,34 +38,33 @@ const classNames = mergeStyleSets({
 
 const IntroduceCard: React.FC<IntroduceCardProps> = ({ title, description, imgUrl }) => {
   return (
-    <Card
-      horizontal
-      className='cdot-introduce-card'
-      styles={{
-        root: {
-          backgroundColor: '#0B0C0E',
-          justifyContent: 'center',
-          alignItems: 'center'
+    <div className={mergeStyles('cdot-introduce-card', {
+      selectors: {
+        ':hover': {
+          selectors: {
+            '.cdot-introduce-card--icon': {
+              backgroundImage: `url(${imgUrl.hover})`
+            }
+          }
         }
-      }}
+      }
+    })}
     >
-      <Card.Item>
-        <Image
-          className={classNames.icon}
-          height={65}
-          width={65}
-          src={imgUrl.default}
-        />
-      </Card.Item>
-      <Card.Section className={classNames.introductionLabel}>
+      <div
+        className={mergeStyles('cdot-introduce-card--icon', {
+          backgroundImage: `url(${imgUrl.default})`
+        })}
+      >
+      </div>
+      <div className='cdot-introduce-card--content'>
         <Text className={classNames.introduction}>
           {title}
         </Text>
         <Text className={classNames.introduction} block>
           {description}
         </Text>
-      </Card.Section>
-    </Card>
+      </div>
+    </div>
   )
 }
 
