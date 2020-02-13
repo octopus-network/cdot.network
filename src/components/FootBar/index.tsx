@@ -1,5 +1,5 @@
 import React from 'react'
-import { HoverCard, HoverCardType, Image, Separator } from 'office-ui-fabric-react'
+import { DirectionalHint, HoverCard, HoverCardType, Image, Separator } from 'office-ui-fabric-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faTwitter, faWeixin } from '@fortawesome/free-brands-svg-icons'
@@ -44,7 +44,13 @@ const FootBar: React.FC = () => {
           </a>
           <HoverCard
             type={HoverCardType.plain}
+            cardOpenDelay={0}
+            instantOpenOnClick={true}
             plainCardProps={{
+              calloutProps: {
+                isBeakVisible: true
+              },
+              directionalHint: DirectionalHint.topCenter,
               onRenderPlainCard: () => (
                 <Image
                   src={require('~asset/images/wechat_qr.png')}
@@ -60,11 +66,17 @@ const FootBar: React.FC = () => {
           </HoverCard>
           <HoverCard
             type={HoverCardType.plain}
+            cardOpenDelay={0}
+            instantOpenOnClick={true}
             plainCardProps={{
+              calloutProps: {
+                isBeakVisible: true
+              },
+              directionalHint: DirectionalHint.topCenter,
               onRenderPlainCard: () => (
-                <span style={{ margin: '9px 10px 19px 10px', color: '#000' }}>
+                <div style={{ margin: '9px 10px', color: '#000' }}>
                   hello@cdot.network
-                </span>
+                </div>
               )
             }}
           >
