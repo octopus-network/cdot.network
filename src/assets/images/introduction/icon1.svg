@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="65px" height="65px" viewBox="0 0 65 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>content2_icon1_default</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="90.1582167%" y1="9.75846748%" x2="16.8021474%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#B8B9BC" offset="0%"></stop>
+            <stop stop-color="#FEFEFE" offset="100%"></stop>
+        </linearGradient>
+        <path d="M18.75,0 C21.269938,0 23.3127514,2.04721409 23.3127514,4.57258065 C23.3127514,6.87623333 21.6128887,8.78200652 19.4016194,9.09888384 L19.4010642,19.121 L28.0813402,14.110123 C27.2501293,12.0366689 28.050646,9.61165803 30.0456677,8.45983169 C32.2326993,7.19714841 35.0270454,7.94266966 36.2870144,10.125 C37.5469834,12.3073303 36.7954507,15.1000657 34.6084191,16.362749 C32.6136773,17.5144137 30.1137196,16.9954832 28.7335405,15.2395001 L20.0530642,20.25 L28.7329596,25.2612391 C30.113018,23.5046624 32.6133974,22.9854247 34.6084191,24.137251 C36.7954507,25.3999343 37.5469834,28.1926697 36.2870144,30.375 C35.0270454,32.5573303 32.2326993,33.3028516 30.0456677,32.0401683 C28.0509259,30.8885036 27.250354,28.4640115 28.0809904,26.3907497 L19.4010642,21.379 L19.4016194,31.4011162 C21.6128887,31.7179935 23.3127514,33.6237667 23.3127514,35.9274194 C23.3127514,38.4527859 21.269938,40.5 18.75,40.5 C16.230062,40.5 14.1872486,38.4527859 14.1872486,35.9274194 C14.1872486,33.6240899 15.8866344,31.7185282 18.09745,31.4012496 L18.0970642,21.379 L9.41900957,26.3907497 C10.249646,28.4640115 9.44907413,30.8885036 7.45433228,32.0401683 C5.26730068,33.3028516 2.47295458,32.5573303 1.21298557,30.375 C-0.0469834362,28.1926697 0.704549277,25.3999343 2.89158087,24.137251 C4.88660262,22.9854247 7.38698197,23.5046624 8.76704043,25.2612391 L17.4460642,20.25 L8.76645953,15.2395001 C7.38628041,16.9954832 4.88632273,17.5144137 2.89158087,16.362749 C0.704549277,15.1000657 -0.0469834362,12.3073303 1.21298557,10.125 C2.47295458,7.94266966 5.26730068,7.19714841 7.45433228,8.45983169 C9.44935402,9.61165803 10.2498707,12.0366689 9.41865983,14.110123 L18.0970642,19.121 L18.09745,9.09875038 C15.8866344,8.78147178 14.1872486,6.87591014 14.1872486,4.57258065 C14.1872486,2.04721409 16.230062,0 18.75,0 Z" id="path-2"></path>
+        <filter x="-4.1%" y="-3.7%" width="113.8%" height="114.8%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="2" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <circle id="path-5" cx="32.25" cy="32.25" r="6"></circle>
+        <filter x="-8.3%" y="-8.3%" width="133.3%" height="133.3%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="定稿2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="web2.1_1440" transform="translate(-761.000000, -849.000000)">
+            <g id="content2" transform="translate(0.000000, 651.000000)">
+                <g id="1" transform="translate(728.000000, 165.000000)">
+                    <g id="content2_icon1_default" transform="translate(33.000000, 33.000000)">
+                        <rect id="矩形" fill="#363739" x="0" y="0" width="64.5" height="64.5" rx="32.25"></rect>
+                        <g id="编组-13" transform="translate(13.500000, 12.000000)">
+                            <mask id="mask-3" fill="white">
+                                <use xlink:href="#path-2"></use>
+                            </mask>
+                            <g id="蒙版">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-2"></use>
+                                <use fill="#C3C4C6" fill-rule="evenodd" xlink:href="#path-2"></use>
+                                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                            </g>
+                            <circle id="椭圆形备份-30" fill="#565759" mask="url(#mask-3)" cx="32.625" cy="42.375" r="16.125"></circle>
+                        </g>
+                        <g id="椭圆形备份-22">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                            <use fill="#C3C4C6" fill-rule="evenodd" xlink:href="#path-5"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

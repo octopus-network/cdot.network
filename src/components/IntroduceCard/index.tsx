@@ -3,6 +3,8 @@ import { Card } from '@uifabric/react-cards'
 import { Text, Image, mergeStyleSets } from 'office-ui-fabric-react'
 import { Introduction } from '~type'
 
+import './index.scss'
+
 export interface IntroduceCardProps extends Introduction {
   to?: string
 }
@@ -44,7 +46,7 @@ const IntroduceCard: React.FC<IntroduceCardProps> = ({ title, description, imgUr
   return (
     <Card
       horizontal
-      className={classNames.root}
+      className='cdot-introduce-card'
       styles={{
         root: {
           backgroundColor: '#0B0C0E',
@@ -59,10 +61,6 @@ const IntroduceCard: React.FC<IntroduceCardProps> = ({ title, description, imgUr
           height={65}
           width={65}
           src={imgUrl.default}
-          srcSet={`
-            ${imgUrl.default},
-            ${imgUrl.large} 2x
-          `}
         />
       </Card.Item>
       <Card.Section className={classNames.introductionLabel}>
