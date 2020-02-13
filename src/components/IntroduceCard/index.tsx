@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Card } from '@uifabric/react-cards'
 import { Text, Image, mergeStyleSets } from 'office-ui-fabric-react'
-import { Introduction } from '~type/index'
+import { Introduction } from '~type'
 
 export interface IntroduceCardProps extends Introduction {
   to?: string
@@ -41,16 +41,6 @@ const classNames = mergeStyleSets({
 })
 
 const IntroduceCard: React.FC<IntroduceCardProps> = ({ title, description, imgUrl }) => {
-  const [width, setWidth] = useState(window.screen.width)
-  useEffect(() => {
-    const onResize = () => {
-      setWidth(window.screen.width)
-    }
-    window.addEventListener('resize', onResize)
-    return () => {
-      window.removeEventListener('resize', onResize)
-    }
-  }, [])
   return (
     <Card
       horizontal
@@ -68,7 +58,11 @@ const IntroduceCard: React.FC<IntroduceCardProps> = ({ title, description, imgUr
           className={classNames.icon}
           height={65}
           width={65}
-          src={width > 640 ? imgUrl.large : imgUrl.default}
+          src={imgUrl.default}
+          srcSet={`
+            ${imgUrl.default},
+            ${imgUrl.large} 2x
+          `}
         />
       </Card.Item>
       <Card.Section className={classNames.introductionLabel}>
