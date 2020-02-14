@@ -1,5 +1,5 @@
-import React, { useMemo, useState } from 'react'
-import { Text, mergeStyleSets, mergeStyles } from 'office-ui-fabric-react'
+import React from 'react'
+import { Text, mergeStyles } from 'office-ui-fabric-react'
 import { Introduction } from '~type'
 
 import './index.scss'
