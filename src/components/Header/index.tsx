@@ -67,28 +67,32 @@ const Header: React.FC<HeaderProps> = ({
         >
           A secured hub to serve heterogeneous ledgers for asset transfer
         </Text>
-        <Link to='/contact'>
-          <PrimaryButton
-            styles={{
-              root: {
-                height: '53px',
-                width: '183px',
-                transition: 'ease-in-out 0.2s'
-              },
-              rootHovered: {
-                backgroundColor: '#fff',
-                transition: 'ease-in-out 0.2s'
-              },
-              label: {
-                color: '#030303',
-                fontWeight: '400',
-                fontSize: '1rem'
-              }
-            }}
-          >
-            Get started
-          </PrimaryButton>
-        </Link>
+        <PrimaryButton
+          onClick={() => {
+            window.scrollTo({
+              top: document.getElementById('scroll-target')?.offsetTop ?? 0,
+              behavior: 'smooth'
+            })
+          }}
+          styles={{
+            root: {
+              height: '53px',
+              width: '183px',
+              transition: 'ease-in-out 0.2s'
+            },
+            rootHovered: {
+              backgroundColor: '#fff',
+              transition: 'ease-in-out 0.2s'
+            },
+            label: {
+              color: '#030303',
+              fontWeight: '400',
+              fontSize: '1rem'
+            }
+          }}
+        >
+          Get started
+        </PrimaryButton>
       </div>
     </div>
   </div>

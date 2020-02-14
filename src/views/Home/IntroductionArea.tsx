@@ -10,7 +10,7 @@ const introductions = [introduction1, introduction2, introduction3]
 
 const IntroductionArea: React.FC = () => {
   return (
-    <div className='cdot-introduction-area'>
+    <div id='scroll-target' className='cdot-introduction-area'>
       <div className='cdot-introduction-area--inner'>
         <div className='cdot-introduction-area--left'>
           <div className='cdot-introduction-area--title'>
