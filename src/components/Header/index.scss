@@ -29,10 +29,13 @@ $cdot-command-bar-height: 50px;
   }
 
   &--right {
+    display: flex;
+    flex-direction: row;
     padding-right: 0.5rem
   }
 
   &--item {
+    position: relative;
     height: 100%;
     color: #dedede;
     text-decoration: none;
@@ -40,10 +43,26 @@ $cdot-command-bar-height: 50px;
     line-height: $cdot-command-bar-height;
     font-weight: 400;
     font-size: 1rem;
-    padding: 0 24px;
+    margin: auto 24px;
+
+    &::after {
+      transition: 0.2s ease-in;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 5px;
+      width: 0;
+      content: ' ';
+      height: 4px;
+      background-color: white
+    }
 
     &:hover {
-      text-decoration: underline
+      &::after {
+        transition: 0.3s ease-out;
+        display: initial;
+        width: 100%
+      }
     }
   }
 }

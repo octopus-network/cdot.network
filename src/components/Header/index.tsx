@@ -32,7 +32,7 @@ export const CommandBar: React.FC<Pick<HeaderProps, 'items'>> = ({
       <div className='cdot-command-bar--right ms-hiddenMdDown'>
         {items.map((item) => (
           // todo: use Link on 'react-router-dom'
-          <a className={'cdot-command-bar--item'} key={item.name} href={item.url || '#'}>
+          <a className='cdot-command-bar--item' key={item.name} href={item.url || '#'}>
             {item.name}
           </a>))}
       </div>
