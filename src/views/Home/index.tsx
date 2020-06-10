@@ -10,7 +10,7 @@ import IntroductionArea from './IntroductionArea'
 import InnovationArea from './InnovationArea'
 import PartnersArea from './PartnersArea'
 import NewsArea from './NewsArea'
-import ParticipantsArea from './ParticipantsArea'
+// import ParticipantsArea from './ParticipantsArea'
 import FootBar from '~component/FootBar'
 
 import '~style/index.scss'
@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
       />
       <IntroductionArea/>
       <InnovationArea/>
-      <ParticipantsArea participants={participants}/>
+      {/* <ParticipantsArea participants={participants}/> */}
       <NewsArea news={news}/>
       <PartnersArea partners={partners}/>
       <FootBar/>

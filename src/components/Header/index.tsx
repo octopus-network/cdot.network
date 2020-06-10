@@ -65,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({
         <Text
           className='cdot-header--title'
         >
-          Realize the full protential of blockchains by connect them together.
+          Realize the full potential of blockchains by connecting them together.
         </Text>
         <PrimaryButton
           onClick={() => {
