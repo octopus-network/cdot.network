@@ -65,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({
         <Text
           className='cdot-header--title'
         >
-          A secured hub to serve heterogeneous ledgers for asset transfer
+          Realize the full protential of blockchains by connect them together.
         </Text>
         <PrimaryButton
           onClick={() => {
