@@ -7,7 +7,7 @@ const InnovationArea: React.FC = () => {
         <div className='cdot-innovation-area--title'>A Rendezvous for Web3 Innovation</div>
         <div className='cdot-innovation-area--banner'/>
         <div className='cdot-innovation-area--content'>
-          Cdot is aiming to be a core component infrastructure for Web3 that empowers next generation of blockchain
+          Cdot is aiming to build core components for Web3 that empowers next generation of blockchain
           innovation
         </div>
       </div>

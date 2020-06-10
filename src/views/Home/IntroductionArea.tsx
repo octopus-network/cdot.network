@@ -19,7 +19,7 @@ const IntroductionArea: React.FC = () => {
           <div className='cdot-introduction-area--content'>
             Cdot addresses key barriers of blockchain
             interoperation: trust minimal, economic sustainable
-            and streamlined user experience.
+            and standardization.
           </div>
           <Link to='/contact' style={{ marginTop: 22 }}>
             <PrimaryButton styles={{

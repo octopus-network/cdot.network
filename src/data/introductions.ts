@@ -11,7 +11,7 @@ export const introduction1: Introduction = {
 
 export const introduction2: Introduction = {
   title: 'Economic Sustainable',
-  description: 'Cross-chain transaction flow is highly optimized and relayers are properly incentivized to make the whole system economic sustainable.',
+  description: 'Cross-chain transaction flow is highly optimized and relayers are properly incentivized to make the whole system economically sustainable.',
   imgUrl: {
     default: require('~asset/images/introduction/icon2.svg'),
     hover: require('~asset/images/introduction/icon2-hover.svg')
@@ -19,8 +19,8 @@ export const introduction2: Introduction = {
 }
 
 export const introduction3: Introduction = {
-  title: 'Streamlined User Experience',
-  description: 'A mechanism ensures the fair of wealth to all participants.',
+  title: 'Standardization',
+  description: 'Interoperation approaches are based on IBC, which is an open, comprehensive, and widely adopted protocol.',
   imgUrl: {
     default: require('~asset/images/introduction/icon3.svg'),
     hover: require('~asset/images/introduction/icon3-hover.svg')
