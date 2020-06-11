@@ -32,7 +32,7 @@ const FootBar: React.FC = () => {
             vertical
           />
           <div className='copyright'>
-            Copyright © 2019 cdot.network foundation. All rights reserved.
+            Copyright © { new Date().getFullYear() } Cdot Network Foundation. All rights reserved.
           </div>
         </div>
         <div className='cdot-foot-bar--right'>
