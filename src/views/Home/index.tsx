@@ -25,7 +25,7 @@ const HomePage: React.FC = () => {
       <Header
         items={[
           { name: 'About', url: '/contact' },
-          { name: 'Github', url: 'https://github.com/cdot-network' },
+          { name: 'Github', url: 'https://github.com/octopus-network' },
           { name: 'Stay in Touch', url: '/contact' }
         ]}
       />

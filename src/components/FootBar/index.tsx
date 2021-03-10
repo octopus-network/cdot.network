@@ -39,7 +39,7 @@ const FootBar: React.FC = () => {
           <a target='_blank' rel='noopener noreferrer' href='https://twitter.com/CdotNetwork'>
             <FontAwesomeIcon color='rgb(136, 136, 136)' size='2x' icon={faTwitter}/>
           </a>
-          <a target='_blank' rel='noopener noreferrer' href='https://github.com/cdot-network'>
+          <a target='_blank' rel='noopener noreferrer' href='https://github.com/octopus-network'>
             <FontAwesomeIcon color='rgb(136, 136, 136)' size='2x' icon={faGithub}/>
           </a>
           <HoverCard

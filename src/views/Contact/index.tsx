@@ -7,7 +7,7 @@ import './index.scss'
 const ContactPage: React.FC = () => (
   <div className='cdot-page cdot-contact'>
     <CommandBar items={[
-      { name: 'Github', url: 'https://github.com/cdot-network' },
+      { name: 'Github', url: 'https://github.com/octopus-network' },
       { name: 'Blog', url: '/contact' },
       { name: 'Stay in Touch', url: '/contact' }
     ]}/>
