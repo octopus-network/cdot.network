@@ -81,7 +81,7 @@ const Header: React.FC<HeaderProps> = ({
             }
           }}
         >
-          Here to oct.network
+          Learn more about octopus
         </PrimaryButton>
       </div>
     </div>
