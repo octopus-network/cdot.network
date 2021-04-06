@@ -23,17 +23,8 @@ const HomePage: React.FC = () => {
   return (
     <div className='cdot-page cdot-home-page'>
       <Header
-        items={[
-          { name: 'About', url: '/contact' },
-          { name: 'Github', url: 'https://github.com/octopus-network' },
-          { name: 'Stay in Touch', url: '/contact' }
-        ]}
+        items={[]}
       />
-      <IntroductionArea/>
-      <InnovationArea/>
-      {/* <ParticipantsArea participants={participants}/> */}
-      <NewsArea news={news}/>
-      <PartnersArea partners={partners}/>
       <FootBar/>
     </div>
   )

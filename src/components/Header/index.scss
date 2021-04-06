@@ -1,7 +1,7 @@
 @import "~office-ui-fabric-react/dist/sass/variables/_Responsive.Variables.scss";
 
 $cdot-header-height: 650.25px;
-$cdot-command-bar-height: 50px;
+$cdot-command-bar-height: 10vh;
 
 .cdot-command-bar {
   position: absolute;
@@ -13,7 +13,7 @@ $cdot-command-bar-height: 50px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: black;
   color: white;
 
   &--inner {
@@ -67,9 +67,17 @@ $cdot-command-bar-height: 50px;
   }
 }
 
+.cdot-header-container {
+  height: 88vh;
+  position: relative;
+}
+
 .cdot-header {
-  height: $cdot-header-height;
-  margin-top: $cdot-command-bar-height;
+  position: absolute;
+  top: $cdot-command-bar-height;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
   //
@@ -93,7 +101,7 @@ $cdot-command-bar-height: 50px;
     display: flex;
     margin: 0 auto;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     max-width: 1046px;
     padding: 0 0.75rem;
 

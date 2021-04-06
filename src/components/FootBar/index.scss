@@ -1,11 +1,13 @@
 @import "~office-ui-fabric-react/dist/sass/variables/_Responsive.Variables.scss";
 
 .cdot-foot-bar {
+  position: fixed;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: 150px;
+  height: 12vh;
   width: 100%;
 
   &--banner {

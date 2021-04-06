@@ -21,7 +21,6 @@ const App: React.FC = () => {
       <BrowserRouter>
         <Switch>
           <Route exact path='/' component={HomePage}/>
-          <Route path='/contact' component={ContactPage}/>
         </Switch>
       </BrowserRouter>
     </Provider>

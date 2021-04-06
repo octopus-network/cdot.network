@@ -53,27 +53,17 @@ export const CommandBar: React.FC<Pick<HeaderProps, 'items'>> = ({
 const Header: React.FC<HeaderProps> = ({
   ...props
 }) => (
-  <div>
+  <div className='cdot-header-container'>
     <CommandBar {...props}/>
     <div className='cdot-header'>
       <div className='cdot-header--inner'>
-        <Image
-          width={166}
-          height={54}
-          src={require('~asset/images/title/cdot.svg')}
-        />
         <Text
           className='cdot-header--title'
         >
-          Realize the full potential of blockchains by connecting them together.
+          We have rebranded to octopus network
         </Text>
         <PrimaryButton
-          onClick={() => {
-            window.scrollTo({
-              top: document.getElementById('scroll-target')?.offsetTop ?? 0,
-              behavior: 'smooth'
-            })
-          }}
+          href='https://oct.network/'
           styles={{
             root: {
               height: '53px',
@@ -91,7 +81,7 @@ const Header: React.FC<HeaderProps> = ({
             }
           }}
         >
-          Get started
+          Here to oct.network
         </PrimaryButton>
       </div>
     </div>
